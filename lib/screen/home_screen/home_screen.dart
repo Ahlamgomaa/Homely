@@ -1,0 +1,160 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:homely/common/common_ui.dart';
+import 'package:homely/generated/l10n.dart';
+import 'package:homely/model/property_type.dart';
+import 'package:homely/screen/home_screen/home_screen_controller.dart';
+import 'package:homely/screen/home_screen/widget/home_latest_property.dart';
+import 'package:homely/screen/home_screen/widget/home_page_view.dart';
+import 'package:homely/screen/home_screen/widget/home_rich_text.dart';
+import 'package:homely/screen/home_screen/widget/home_top_view.dart';
+import 'package:homely/screen/property_type_screen/property_type_screen.dart';
+import 'package:homely/service/navigate_service.dart';
+import 'package:homely/utils/color_res.dart';
+import 'package:homely/utils/my_text_style.dart';
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final controller = Get.put(HomeScreenController());
+    return Scaffold(
+      body: GetBuilder(
+          init: controller,
+          builder: (controller) {
+            return Column(
+              children: [
+                HomeTopView(
+                  onTap: controller.getCityName,
+                  address: controller.selectedCity,
+                  onResetCityBtn: controller.onResetCityBtn,
+                  isResetBtnVisible: controller.isResetBtnVisible,
+                ),
+                Expanded(
+                  child: controller.isLoading
+                      ? CommonUI.loaderWidget()
+                      : RefreshIndicator(
+                          onRefresh: () async => controller.onRefresh(),
+                          child: Stack(
+                            children: [
+                              SingleChildScrollView(
+                                controller: controller.scrollController,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    HomePageView(controller: controller),
+                                    if ((controller.homeData?.propertyType ?? []).isNotEmpty)
+                                      HomeRichText(
+                                          title1: S.of(context).what,
+                                          title2: S.of(context).youAreLookingFor),
+                                    const SizedBox(height: 5),
+                                    if ((controller.homeData?.propertyType ?? []).isNotEmpty)
+                                      SizedBox(
+                                        height: 38,
+                                        child: ListView.builder(
+                                          itemCount: controller.homeData?.propertyType?.length,
+                                          physics: const BouncingScrollPhysics(),
+                                          padding: EdgeInsets.zero,
+                                          scrollDirection: Axis.horizontal,
+                                          itemBuilder: (context, index) {
+                                            PropertyType? type =
+                                                controller.homeData?.propertyType?[index];
+                                            return InkWell(
+                                              onTap: () {
+                                                NavigateService.push(
+                                                  context,
+                                                  PropertyTypeScreen(
+                                                      type: type, map: const {}, screenType: 0),
+                                                );
+                                              },
+                                              child: Container(
+                                                height: 35,
+                                                padding: const EdgeInsets.symmetric(horizontal: 20),
+                                                margin: const EdgeInsets.symmetric(horizontal: 5),
+                                                alignment: Alignment.center,
+                                                decoration: BoxDecoration(
+                                                  color: ColorRes.porcelain,
+                                                  borderRadius: BorderRadius.circular(30),
+                                                ),
+                                                child: Text(
+                                                  (type?.title ?? '').capitalize ?? '',
+                                                  style: MyTextStyle.productMedium(
+                                                      size: 16, color: ColorRes.royalBlue),
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                        ),
+                                      ),
+                                    const SizedBox(height: 10),
+                                    HomeLatestProperty(
+                                        latestProperties:
+                                            controller.homeData?.latestProperties ?? []),
+                                  ],
+                                ),
+                              ),
+                              if (!controller.isLoading &&
+                                  (controller.homeData?.latestProperties ?? []).isEmpty &&
+                                  (controller.homeData?.featured ?? []).isEmpty)
+                                Center(
+                                    child: CommonUI.noDataFound(
+                                        width: 100, height: 100, title: S.current.noPropertyFound))
+                            ],
+                          ),
+                        ),
+                ),
+              ],
+            );
+          }),
+    );
+  }
+}
+
+class HomeRowIconText extends StatelessWidget {
+  final String image;
+  final String title;
+  final bool isVisible;
+
+  const HomeRowIconText(
+      {super.key, required this.image, required this.title, required this.isVisible});
+
+  @override
+  Widget build(BuildContext context) {
+    return Visibility(
+      visible: isVisible,
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 5),
+            decoration:
+                BoxDecoration(color: ColorRes.snowDrift, borderRadius: BorderRadius.circular(50)),
+            child: Row(
+              children: [
+                Image.asset(
+                  image,
+                  height: 19,
+                  width: 25,
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  title,
+                  style: MyTextStyle.productRegular(
+                    color: ColorRes.conCord,
+                  ),
+                )
+              ],
+            ),
+          ),
+          const SizedBox(
+            width: 3,
+          ),
+        ],
+      ),
+    );
+  }
+}

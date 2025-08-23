@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "75039186745",
+    "project_id": "homely-675a9",
+    "storage_bucket": "homely-675a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75039186745:android:3edf71f89104e09c75d2e8",
+        "android_client_info": {
+          "package_name": "com.retrytech.homely"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "75039186745-a6mo5ds7a6tng4p964vt1fq42vg8f5h3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.retrytech.homely",
+            "certificate_hash": "97c66063c42817740498d1c74e068c146bf0a0ce"
+          }
+        },
+        {
+          "client_id": "75039186745-7f4nm6j82emh2uhqf14epcnpnctvequs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBelApTQWVcVEkFX_URWHBckQQMsNAycw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "75039186745-7f4nm6j82emh2uhqf14epcnpnctvequs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
