@@ -84,6 +84,8 @@ dependencies:
   #----------------------- UI -----------------------#
   detectable_text_field: ^3.0.2
   flutter_speed_dial: ^7.0.0
+  flutter_launcher_icons: ^0.14.4
+  rename: ^3.1.0
 
 dev_dependencies:
   flutter_test:
@@ -156,3 +158,9 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 flutter_intl:
   enabled: true
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_icon.jpg"
+  min_sdk_android: 21

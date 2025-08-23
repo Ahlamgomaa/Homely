@@ -48,12 +48,13 @@ class ProfileScreen extends StatelessWidget {
                                 child: Column(
                                   children: [
                                     Container(
-                                      padding:
-                                          const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 20, vertical: 20),
                                       width: double.infinity,
                                       color: ColorRes.royalBlue,
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Row(
                                             children: [
@@ -65,14 +66,20 @@ class ProfileScreen extends StatelessWidget {
                                               ),
                                               const SizedBox(width: 30),
                                               FollowFollowersItem(
-                                                count: '${user?.followers ?? 0}',
+                                                count:
+                                                    '${user?.followers ?? 0}',
                                                 label: S.of(context).followers,
-                                                onTap: () => controller.onNavigateUserList(0, user),
+                                                onTap: () => controller
+                                                    .onNavigateUserList(
+                                                        0, user),
                                               ),
                                               FollowFollowersItem(
-                                                count: '${user?.following ?? 0}',
+                                                count:
+                                                    '${user?.following ?? 0}',
                                                 label: S.of(context).following,
-                                                onTap: () => controller.onNavigateUserList(1, user),
+                                                onTap: () => controller
+                                                    .onNavigateUserList(
+                                                        1, user),
                                               ),
                                             ],
                                           ),
@@ -81,23 +88,37 @@ class ProfileScreen extends StatelessWidget {
                                             children: [
                                               Text(
                                                 user?.fullname ?? '',
-                                                style: MyTextStyle.productMedium(
-                                                    size: 26, color: ColorRes.white),
+                                                style:
+                                                    MyTextStyle.productMedium(
+                                                        size: 26,
+                                                        color: ColorRes.white),
                                               ),
-                                              VerifiedIconCustom(isWhiteIcon: true, userData: user),
+                                              VerifiedIconCustom(
+                                                  isWhiteIcon: true,
+                                                  userData: user),
                                               const SizedBox(
                                                 width: 10,
                                               ),
                                               Container(
-                                                padding: const EdgeInsets.symmetric(
-                                                    horizontal: 20, vertical: 7),
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 20,
+                                                        vertical: 7),
                                                 decoration: BoxDecoration(
-                                                    color: ColorRes.white.withValues(alpha: 0.20),
-                                                    borderRadius: BorderRadius.circular(50)),
+                                                    color: ColorRes.white
+                                                        .withValues(
+                                                            alpha: 0.20),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            50)),
                                                 child: Text(
-                                                  (user?.userType ?? 0).getUserType,
-                                                  style: MyTextStyle.productRegular(
-                                                      size: 15, color: ColorRes.white),
+                                                  (user?.userType ?? 0)
+                                                      .getUserType,
+                                                  style: MyTextStyle
+                                                      .productRegular(
+                                                          size: 15,
+                                                          color:
+                                                              ColorRes.white),
                                                 ),
                                               )
                                             ],
@@ -108,7 +129,8 @@ class ProfileScreen extends StatelessWidget {
                                           Text(
                                             user?.email ?? '',
                                             style: MyTextStyle.productLight(
-                                                color: ColorRes.white, size: 16),
+                                                color: ColorRes.white,
+                                                size: 16),
                                           ),
                                         ],
                                       ),
@@ -116,7 +138,8 @@ class ProfileScreen extends StatelessWidget {
                                     Visibility(
                                       visible: user?.address != null,
                                       child: Container(
-                                        color: ColorRes.white.withValues(alpha: 0.10),
+                                        color: ColorRes.white
+                                            .withValues(alpha: 0.10),
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 20, vertical: 10),
                                         child: Row(
@@ -131,7 +154,8 @@ class ProfileScreen extends StatelessWidget {
                                             Text(
                                               user?.address ?? '',
                                               style: MyTextStyle.productLight(
-                                                  color: ColorRes.white, size: 15),
+                                                  color: ColorRes.white,
+                                                  size: 15),
                                             )
                                           ],
                                         ),
@@ -152,10 +176,12 @@ class ProfileScreen extends StatelessWidget {
                                     value2: '${user?.forSaleProperty ?? 0}',
                                     title2: S.of(context).forSale,
                                     onTap1: () {
-                                      Get.to(() => const MyPropertiesScreen(type: 1));
+                                      Get.to(() =>
+                                          const MyPropertiesScreen(type: 1));
                                     },
                                     onTap2: () {
-                                      Get.to(() => const MyPropertiesScreen(type: 2));
+                                      Get.to(() =>
+                                          const MyPropertiesScreen(type: 2));
                                     },
                                   ),
                                   // Padding(
@@ -171,18 +197,21 @@ class ProfileScreen extends StatelessWidget {
                                       onTap: () {
                                         Get.to(() => YourReelsScreen(
                                               userId: controller.userData?.id,
-                                              onUpdateReel: controller.onUpdateReelsList,
+                                              onUpdateReel:
+                                                  controller.onUpdateReelsList,
                                               reelType: ReelType.userReel,
                                               reels: user?.yourReels ?? [],
                                             ));
                                       },
-                                      isShowAllVisible: (user?.yourReels?.length ?? 0) > 3,
+                                      isShowAllVisible:
+                                          (user?.yourReels?.length ?? 0) > 3,
                                     ),
                                   if ((user?.yourReels ?? []).isNotEmpty)
                                     SizedBox(
                                       height: 180,
                                       child: ListView.builder(
-                                        padding: const EdgeInsets.only(left: 15),
+                                        padding:
+                                            const EdgeInsets.only(left: 15),
                                         scrollDirection: Axis.horizontal,
                                         itemCount: user?.yourReels?.length ?? 0,
                                         itemBuilder: (context, index) {
@@ -190,9 +219,11 @@ class ProfileScreen extends StatelessWidget {
                                             onTap: () {
                                               Get.to(
                                                 () => ReelsScreen(
-                                                  screenType: ScreenTypeIndex.user,
+                                                  screenType:
+                                                      ScreenTypeIndex.user,
                                                   reels: user?.yourReels ?? [],
-                                                  onUpdateReel: controller.onUpdateReelsList,
+                                                  onUpdateReel: controller
+                                                      .onUpdateReelsList,
                                                   position: index,
                                                   userID: user?.id,
                                                 ),
@@ -200,7 +231,8 @@ class ProfileScreen extends StatelessWidget {
                                               );
                                             },
                                             reelData: user?.yourReels?[index],
-                                            onDeleteTap: controller.onDeleteReel,
+                                            onDeleteTap:
+                                                controller.onDeleteReel,
                                           );
                                         },
                                       ),
@@ -222,9 +254,11 @@ class ProfileScreen extends StatelessWidget {
                                     },
                                   ),
                                   RowTwoCard(
-                                    value1: '${user?.waitingTourRecivedRequest ?? 0}',
+                                    value1:
+                                        '${user?.waitingTourRecivedRequest ?? 0}',
                                     title1: S.of(context).waiting,
-                                    value2: '${user?.upcomingTourRecivedRequest ?? 0}',
+                                    value2:
+                                        '${user?.upcomingTourRecivedRequest ?? 0}',
                                     title2: S.of(context).upcoming,
                                     onTap1: () {
                                       controller.onNavigateTourScreen(0, 0);
@@ -240,9 +274,11 @@ class ProfileScreen extends StatelessWidget {
                                     },
                                   ),
                                   RowTwoCard(
-                                    value1: '${user?.waitingTourSubmittedRequest ?? 0}',
+                                    value1:
+                                        '${user?.waitingTourSubmittedRequest ?? 0}',
                                     title1: S.of(context).waiting,
-                                    value2: '${user?.upcomingTourSubmittedRequest ?? 0}',
+                                    value2:
+                                        '${user?.upcomingTourSubmittedRequest ?? 0}',
                                     title2: S.of(context).upcoming,
                                     onTap1: () {
                                       controller.onNavigateTourScreen(1, 0);
@@ -279,6 +315,8 @@ class CustomActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isRtl = Directionality.of(context) == TextDirection.rtl;
+
     return SpeedDial(
       icon: Icons.add,
       overlayColor: ColorRes.black,
@@ -287,11 +325,23 @@ class CustomActionButton extends StatelessWidget {
       children: [
         SpeedDialChild(
           onTap: () => onTap(1),
-          labelWidget: LabelWidget(image: AssetRes.icReelsIcon, title: S.current.addReel),
+          labelWidget: Transform.translate(
+            offset: Offset(isRtl ? 40 : 0, 0), // لو RTL نزيحه شوية لجوا
+            child: LabelWidget(
+              image: AssetRes.icReelsIcon,
+              title: S.current.addReel,
+            ),
+          ),
         ),
         SpeedDialChild(
           onTap: () => onTap(2),
-          labelWidget: LabelWidget(image: AssetRes.homeDashboardIcon, title: S.current.addProperty),
+          labelWidget: Transform.translate(
+            offset: Offset(isRtl ? 40 : 0, 0),
+            child: LabelWidget(
+              image: AssetRes.homeDashboardIcon,
+              title: S.current.addProperty,
+            ),
+          ),
         ),
       ],
     );
@@ -337,7 +387,10 @@ class RowTowText extends StatelessWidget {
   final bool isShowAllVisible;
 
   const RowTowText(
-      {super.key, required this.title, required this.onTap, this.isShowAllVisible = true});
+      {super.key,
+      required this.title,
+      required this.onTap,
+      this.isShowAllVisible = true});
 
   @override
   Widget build(BuildContext context) {
@@ -433,7 +486,8 @@ class ProfileCard extends StatelessWidget {
         children: [
           Text(
             value,
-            style: MyTextStyle.productMedium(size: 30, color: ColorRes.royalBlue),
+            style:
+                MyTextStyle.productMedium(size: 30, color: ColorRes.royalBlue),
           ),
           Text(
             title,

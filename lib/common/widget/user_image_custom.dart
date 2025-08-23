@@ -37,7 +37,8 @@ class UserImageCustom extends StatelessWidget {
                 cacheKey: image.image,
                 fit: BoxFit.cover,
                 errorWidget: (context, error, stackTrace) {
-                  return ErrorTextImageUser(widthHeight: widthHeight, name: name);
+                  return ErrorTextImageUser(
+                      widthHeight: widthHeight, name: name);
                 },
               ),
       ),
@@ -49,7 +50,8 @@ class ErrorTextImageUser extends StatelessWidget {
   final double widthHeight;
   final String name;
 
-  const ErrorTextImageUser({super.key, required this.widthHeight, required this.name});
+  const ErrorTextImageUser(
+      {super.key, required this.widthHeight, required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +60,9 @@ class ErrorTextImageUser extends StatelessWidget {
       height: widthHeight,
       padding: name.isEmpty ? const EdgeInsets.all(15) : EdgeInsets.zero,
       decoration: BoxDecoration(
-        color: name.isEmpty ? ColorRes.royalBlue : ColorRes.balticSea.withValues(alpha: 0.8),
+        color: name.isEmpty
+            ? ColorRes.royalBlue
+            : ColorRes.balticSea.withValues(alpha: 0.8),
         shape: BoxShape.circle,
       ),
       alignment: Alignment.center,
@@ -66,7 +70,8 @@ class ErrorTextImageUser extends StatelessWidget {
           ? Image.asset(AssetRes.homelyLogo)
           : Text(
               (name.isEmpty ? 'h' : name[0]).toUpperCase(),
-              style: MyTextStyle.productBlack(color: ColorRes.whiteSmoke, size: widthHeight / 1.8),
+              style: MyTextStyle.productBlack(
+                  color: ColorRes.whiteSmoke, size: widthHeight / 1.7),
             ),
     );
   }

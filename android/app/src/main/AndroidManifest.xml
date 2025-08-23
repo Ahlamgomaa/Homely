@@ -8,8 +8,8 @@
     <application
         android:name="${applicationName}"
         android:enableOnBackInvokedCallback="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="Homely"
+        android:icon="@mipmap/launcher_icon"
+        android:label="عربة العقارية"
         android:largeHeap="true"
         android:usesCleartextTraffic="true">
         <activity

@@ -6,7 +6,7 @@ class ColorRes {
   static const Color whiteSmoke = Color(0xFFF5F5F5);
   static const Color balticSea = Color(0xFF282828);
   static const Color black = Color(0xFF000000);
-  static const Color royalBlue = Color(0xFF286DE8);
+  static const Color royalBlue = Color(0xFFEAB308);
   static const Color silverChalice = Color(0xFFAEAEAE);
   static const Color softPeach = Color(0xFFEFEFEF);
   static const Color desertStorm = Color(0xFFF8F8F8);
