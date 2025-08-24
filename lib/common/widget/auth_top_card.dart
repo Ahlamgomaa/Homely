@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:homely/generated/l10n.dart';
 import 'package:homely/utils/asset_res.dart';
 import 'package:homely/utils/color_res.dart';
-import 'package:homely/utils/const_res.dart';
 import 'package:homely/utils/my_text_style.dart';
 
 class AuthTopCard extends StatelessWidget {
@@ -28,13 +28,18 @@ class AuthTopCard extends StatelessWidget {
               Visibility(
                 visible: isBackBtnVisible,
                 child: Align(
-                  alignment: Directionality.of(context) == TextDirection.rtl ? Alignment.topRight : Alignment.topLeft,
+                  alignment: Directionality.of(context) == TextDirection.rtl
+                      ? Alignment.topRight
+                      : Alignment.topLeft,
                   child: InkWell(
                     onTap: () {
                       Get.back();
                     },
                     child: Container(
-                      margin: EdgeInsets.only(left: 10, top: AppBar().preferredSize.height, right: 10),
+                      margin: EdgeInsets.only(
+                          left: 10,
+                          top: AppBar().preferredSize.height,
+                          right: 10),
                       child: const Icon(
                         Icons.arrow_back,
                         size: 25,
@@ -58,8 +63,9 @@ class AuthTopCard extends StatelessWidget {
                       width: 10,
                     ),
                     Text(
-                      cAppName.capitalize ?? '',
-                      style: MyTextStyle.productBlack(color: Colors.white, size: 35),
+                      S.of(context).appName,
+                      style: MyTextStyle.productBlack(
+                          color: Colors.white, size: 35),
                     )
                   ],
                 ),

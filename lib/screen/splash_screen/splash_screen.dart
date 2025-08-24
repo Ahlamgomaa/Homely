@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:homely/generated/l10n.dart';
 import 'package:homely/screen/splash_screen/splash_screen_controller.dart';
 import 'package:homely/utils/asset_res.dart';
 import 'package:homely/utils/color_res.dart';
-import 'package:homely/utils/const_res.dart';
 import 'package:homely/utils/my_text_style.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -24,7 +24,7 @@ class SplashScreen extends StatelessWidget {
           ),
           Align(
             alignment: Alignment.center,
-            child: Row(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
@@ -34,11 +34,12 @@ class SplashScreen extends StatelessWidget {
                   width: 50,
                 ),
                 const SizedBox(
-                  width: 10,
+                  width: 15,
                 ),
                 Text(
-                  cAppName,
-                  style: MyTextStyle.productBlack(size: 32, color: ColorRes.balticSea),
+                  S.of(context).appName,
+                  style: MyTextStyle.productBlack(
+                      size: 25, color: ColorRes.royalBlue),
                 ),
               ],
             ),
@@ -49,7 +50,8 @@ class SplashScreen extends StatelessWidget {
               builder: (controller) => controller.isLoading
                   ? Container(
                       margin: const EdgeInsets.symmetric(vertical: 20),
-                      child: const CircularProgressIndicator(color: ColorRes.royalBlue),
+                      child: const CircularProgressIndicator(
+                          color: ColorRes.royalBlue),
                     )
                   : const SizedBox(),
             ),

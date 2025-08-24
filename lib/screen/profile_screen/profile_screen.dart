@@ -326,7 +326,7 @@ class CustomActionButton extends StatelessWidget {
         SpeedDialChild(
           onTap: () => onTap(1),
           labelWidget: Transform.translate(
-            offset: Offset(isRtl ? 40 : 0, 0), // لو RTL نزيحه شوية لجوا
+            offset: Offset(isRtl ? 52 : 0, 0),
             child: LabelWidget(
               image: AssetRes.icReelsIcon,
               title: S.current.addReel,
@@ -336,7 +336,7 @@ class CustomActionButton extends StatelessWidget {
         SpeedDialChild(
           onTap: () => onTap(2),
           labelWidget: Transform.translate(
-            offset: Offset(isRtl ? 40 : 0, 0),
+            offset: Offset(isRtl ? 52 : 0, 0),
             child: LabelWidget(
               image: AssetRes.homeDashboardIcon,
               title: S.current.addProperty,

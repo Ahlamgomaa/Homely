@@ -4,7 +4,6 @@ import 'package:homely/generated/l10n.dart';
 import 'package:homely/screen/camera_screen/camera_screen_controller.dart';
 import 'package:homely/utils/asset_res.dart';
 import 'package:homely/utils/color_res.dart';
-import 'package:homely/utils/const_res.dart';
 import 'package:homely/utils/my_text_style.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -36,7 +35,8 @@ class PermissionNotGrantedWidget extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30),
                       color: ColorRes.white.withValues(alpha: 0.4)),
                   alignment: Alignment.center,
-                  child: const Icon(Icons.close_rounded, color: ColorRes.white, size: 30),
+                  child: const Icon(Icons.close_rounded,
+                      color: ColorRes.white, size: 30),
                 ),
               ),
             ),
@@ -48,11 +48,14 @@ class PermissionNotGrantedWidget extends StatelessWidget {
                   text: S.of(context).allow,
                   children: [
                     TextSpan(
-                        text: ' $cAppName ',
-                        style: MyTextStyle.productBlack(size: 17, color: ColorRes.royalBlue)),
-                    TextSpan(text: S.of(context).toAccessYourCameraAndMicrophone)
+                        text: ' ${S.of(context).appName} ',
+                        style: MyTextStyle.productBlack(
+                            size: 17, color: ColorRes.royalBlue)),
+                    TextSpan(
+                        text: S.of(context).toAccessYourCameraAndMicrophone)
                   ],
-                  style: MyTextStyle.productRegular(size: 17, color: ColorRes.white),
+                  style: MyTextStyle.productRegular(
+                      size: 17, color: ColorRes.white),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -62,7 +65,8 @@ class PermissionNotGrantedWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
               child: Text(
                 S.of(context).ifAppearsThatCameraPermissionHasNotBeenGrantedTo,
-                style: MyTextStyle.productRegular(size: 14, color: ColorRes.silverChalice),
+                style: MyTextStyle.productRegular(
+                    size: 14, color: ColorRes.silverChalice),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -70,13 +74,15 @@ class PermissionNotGrantedWidget extends StatelessWidget {
             InkWell(
               onTap: () => openAppSettings(),
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 decoration: BoxDecoration(
                   color: ColorRes.white,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(S.of(context).openSettings,
-                    style: MyTextStyle.productMedium(color: ColorRes.royalBlue, size: 16)),
+                    style: MyTextStyle.productMedium(
+                        color: ColorRes.royalBlue, size: 16)),
               ),
             ),
             const Spacer(),

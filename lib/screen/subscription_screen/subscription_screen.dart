@@ -8,7 +8,6 @@ import 'package:homely/screen/subscription_screen/subscription_screen_controller
 import 'package:homely/service/subscription_manager.dart';
 import 'package:homely/utils/asset_res.dart';
 import 'package:homely/utils/color_res.dart';
-import 'package:homely/utils/const_res.dart';
 import 'package:homely/utils/my_text_style.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -52,7 +51,8 @@ class SubscriptionScreen extends StatelessWidget {
                               onTap: controller.onRestoreSubscription,
                               child: Text(
                                 S.of(context).restore.toUpperCase(),
-                                style: MyTextStyle.productMedium(size: 16, color: ColorRes.dawn),
+                                style: MyTextStyle.productMedium(
+                                    size: 16, color: ColorRes.dawn),
                               ),
                             ),
                           )
@@ -71,15 +71,17 @@ class SubscriptionScreen extends StatelessWidget {
                               height: 73,
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 10.0),
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 10.0),
                               child: Text(
-                                cAppName,
-                                style:
-                                    MyTextStyle.productBlack(size: 35, color: ColorRes.royalBlue),
+                                S.of(context).appName,
+                                style: MyTextStyle.productBlack(
+                                    size: 35, color: ColorRes.royalBlue),
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 8.0),
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 8.0),
                               child: RichText(
                                 text: TextSpan(
                                     text: S.of(context).subscribeTo,
@@ -88,18 +90,21 @@ class SubscriptionScreen extends StatelessWidget {
                                       TextSpan(
                                         text: ' ${S.of(context).pro}',
                                         style: MyTextStyle.productBlack(
-                                            size: 16, color: ColorRes.royalBlue),
+                                            size: 16,
+                                            color: ColorRes.royalBlue),
                                       )
                                     ]),
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 50.0),
                               child: Text(
                                 S
                                     .of(context)
                                     .subscribeToProVersionAndEnjoyExclusiveBenefitsListedBelow,
-                                style: MyTextStyle.productLight(color: ColorRes.dawn),
+                                style: MyTextStyle.productLight(
+                                    color: ColorRes.dawn),
                                 textAlign: TextAlign.center,
                               ),
                             ),
@@ -114,19 +119,27 @@ class SubscriptionScreen extends StatelessWidget {
                                       TextSpan(
                                         text: ' ${S.of(context).pro}?',
                                         style: MyTextStyle.productBlack(
-                                            size: 16, color: ColorRes.royalBlue),
+                                            size: 16,
+                                            color: ColorRes.royalBlue),
                                       )
                                     ]),
                               ),
                             ),
                             const SizedBox(height: 11),
                             CheckBoxWithHeading(
-                                heading: S.of(context).youCanListUnlimitedProperties),
-                            CheckBoxWithHeading(heading: S.of(context).youCanUploadUnlimitedReels),
-                            CheckBoxWithHeading(heading: S.of(context).removeDisturbingAds),
-                            CheckBoxWithHeading(heading: S.of(context).cancelAnytime),
+                                heading: S
+                                    .of(context)
+                                    .youCanListUnlimitedProperties),
                             CheckBoxWithHeading(
-                                heading: S.of(context).getVerifiedBadge, isVerificationShow: true),
+                                heading:
+                                    S.of(context).youCanUploadUnlimitedReels),
+                            CheckBoxWithHeading(
+                                heading: S.of(context).removeDisturbingAds),
+                            CheckBoxWithHeading(
+                                heading: S.of(context).cancelAnytime),
+                            CheckBoxWithHeading(
+                                heading: S.of(context).getVerifiedBadge,
+                                isVerificationShow: true),
                             const SizedBox(height: 10),
                             GetBuilder(
                                 init: controller,
@@ -135,19 +148,26 @@ class SubscriptionScreen extends StatelessWidget {
                                     children: List.generate(
                                       controller.packages.length,
                                       (index) {
-                                        Package package = controller.packages[index];
-                                        bool isSelected = controller.selectedPackage == package;
+                                        Package package =
+                                            controller.packages[index];
+                                        bool isSelected =
+                                            controller.selectedPackage ==
+                                                package;
                                         return InkWell(
-                                          onTap: () => controller.onPlanChanged(package),
+                                          onTap: () =>
+                                              controller.onPlanChanged(package),
                                           child: Container(
                                             padding: const EdgeInsets.symmetric(
                                                 horizontal: 20, vertical: 15),
-                                            margin: const EdgeInsets.symmetric(vertical: 10),
+                                            margin: const EdgeInsets.symmetric(
+                                                vertical: 10),
                                             decoration: BoxDecoration(
                                                 color: isSelected
-                                                    ? ColorRes.royalBlue.withValues(alpha: .15)
+                                                    ? ColorRes.royalBlue
+                                                        .withValues(alpha: .15)
                                                     : ColorRes.white,
-                                                borderRadius: BorderRadius.circular(15),
+                                                borderRadius:
+                                                    BorderRadius.circular(15),
                                                 border: Border.all(
                                                     color: isSelected
                                                         ? ColorRes.royalBlue
@@ -156,20 +176,28 @@ class SubscriptionScreen extends StatelessWidget {
                                               children: [
                                                 Expanded(
                                                   child: Column(
-                                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
                                                     children: [
                                                       Text(
-                                                        package.storeProduct.title,
+                                                        package
+                                                            .storeProduct.title,
                                                         style: MyTextStyle.productBold(
                                                             size: 18,
                                                             color: isSelected
-                                                                ? ColorRes.royalBlue
-                                                                : ColorRes.balticSea),
+                                                                ? ColorRes
+                                                                    .royalBlue
+                                                                : ColorRes
+                                                                    .balticSea),
                                                       ),
                                                       const SizedBox(height: 5),
                                                       Text(
-                                                        package.storeProduct.description,
-                                                        style: MyTextStyle.productLight(size: 13),
+                                                        package.storeProduct
+                                                            .description,
+                                                        style: MyTextStyle
+                                                            .productLight(
+                                                                size: 13),
                                                       ),
                                                     ],
                                                   ),
@@ -178,14 +206,19 @@ class SubscriptionScreen extends StatelessWidget {
                                                   width: 10,
                                                 ),
                                                 Text(
-                                                  package.storeProduct.priceString,
-                                                  style: MyTextStyle.productBlack(
-                                                      size: 26,
-                                                      color: isSelected
-                                                          ? ColorRes.royalBlue
-                                                          : ColorRes.balticSea),
+                                                  package
+                                                      .storeProduct.priceString,
+                                                  style:
+                                                      MyTextStyle.productBlack(
+                                                          size: 26,
+                                                          color: isSelected
+                                                              ? ColorRes
+                                                                  .royalBlue
+                                                              : ColorRes
+                                                                  .balticSea),
                                                   maxLines: 2,
-                                                  overflow: TextOverflow.ellipsis,
+                                                  overflow:
+                                                      TextOverflow.ellipsis,
                                                 )
                                               ],
                                             ),
@@ -200,18 +233,24 @@ class SubscriptionScreen extends StatelessWidget {
                               RichText(
                                 textAlign: TextAlign.center,
                                 text: TextSpan(
-                                  text: S.of(context).pleaseConfigureSubscriptionMoreInfoHere,
+                                  text: S
+                                      .of(context)
+                                      .pleaseConfigureSubscriptionMoreInfoHere,
                                   style: MyTextStyle.productRegular(),
                                   children: [
                                     TextSpan(
-                                      text: '\nhttps://errors.rev.cat/configuring-sdk',
-                                      style: MyTextStyle.productRegular(color: ColorRes.royalBlue),
+                                      text:
+                                          '\nhttps://errors.rev.cat/configuring-sdk',
+                                      style: MyTextStyle.productRegular(
+                                          color: ColorRes.royalBlue),
                                       recognizer: TapGestureRecognizer()
                                         ..onTap = () async {
                                           var url =
                                               'https://www.revenuecat.com/docs/getting-started/configuring-sdk';
-                                          if (!await launchUrl(Uri.parse(url))) {
-                                            throw Exception('Could not launch ');
+                                          if (!await launchUrl(
+                                              Uri.parse(url))) {
+                                            throw Exception(
+                                                'Could not launch ');
                                           }
                                         },
                                     ),
@@ -220,12 +259,14 @@ class SubscriptionScreen extends StatelessWidget {
                               ),
                             if (isPurchaseConfig)
                               Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 14.0),
                                 child: Text(
                                   S
                                       .of(context)
                                       .after3DayTrialThisSubscriptionAutomaticallyRenewsAsPer,
-                                  style: MyTextStyle.productLight(size: 11, color: ColorRes.dawn),
+                                  style: MyTextStyle.productLight(
+                                      size: 11, color: ColorRes.dawn),
                                   textAlign: TextAlign.center,
                                 ),
                               ),
@@ -260,7 +301,8 @@ class CheckBoxWithHeading extends StatelessWidget {
   final String heading;
   final bool isVerificationShow;
 
-  const CheckBoxWithHeading({super.key, required this.heading, this.isVerificationShow = false});
+  const CheckBoxWithHeading(
+      {super.key, required this.heading, this.isVerificationShow = false});
 
   @override
   Widget build(BuildContext context) {

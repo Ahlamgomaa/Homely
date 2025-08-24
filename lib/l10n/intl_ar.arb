@@ -19,7 +19,7 @@
   "forRent": "للإيجار",
   "properties": "عقارات",
   "youAreLookingFor": "تدور على",
-  "what": "إيش",
+  "what": "وش",
   "latest": "الأحدث",
   "home": "الرئيسية",
   "message": "رسالة",
@@ -345,5 +345,8 @@
   "getVerifiedBadge": "احصل على علامة التوثيق",
   "yourUploadLimitIsReachednpleaseSubscribeToGetMoreUploads": "وصلت للحد الأقصى للرفع!\nاشترك في الخطة البريميوم عشان ترفع أكثر",
   "selectCity": "اختر المدينة",
-  "mapScreen": "اختر الموقع"
+  "mapScreen": "اختر الموقع",
+  "sale":"بيع ",
+  "rent":"ايجار",
+  "appName":"عربة العقارية "
 }

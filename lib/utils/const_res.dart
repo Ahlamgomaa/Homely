@@ -14,10 +14,10 @@ class ConstRes {
       'ENTER REVENUE CAT API KEY ANDROID';
 
   /// FCM
-  static const String subscribeTopic = 'homely';
+  static const String subscribeTopic = 'ArabRealEstate';
 }
 
-const String cAppName = 'Homely';
+// const String cAppName = 'عربة العقارية';
 const int cLoginType = 2;
 
 /// email Login

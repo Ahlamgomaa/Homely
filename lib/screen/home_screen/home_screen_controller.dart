@@ -23,6 +23,7 @@ class HomeScreenController extends GetxController {
   double lng = 0;
 
   bool isResetBtnVisible = false;
+  String? propertyMode = 'sale'; // القيمة الافتراضية للبيع
 
   @override
   void onReady() {
@@ -84,13 +85,16 @@ class HomeScreenController extends GetxController {
       if (value != null) {
         lat = value[uUserLatitude];
         lng = value[uUserLongitude];
-        selectedCity =
-            value[pSelectCity] ?? '${lat.toStringAsFixed(4)}N , ${lng.toStringAsFixed(4)}E';
+        selectedCity = value[pSelectCity] ??
+            '${lat.toStringAsFixed(4)}N , ${lng.toStringAsFixed(4)}E';
         update();
-        await prefService.saveString(key: uUserLatitude, value: lat.toStringAsFixed(4));
-        await prefService.saveString(key: uUserLongitude, value: lng.toStringAsFixed(4));
+        await prefService.saveString(
+            key: uUserLatitude, value: lat.toStringAsFixed(4));
+        await prefService.saveString(
+            key: uUserLongitude, value: lng.toStringAsFixed(4));
         if (value[pSelectCity] != null) {
-          await prefService.saveString(key: pSelectCity, value: value[pSelectCity]);
+          await prefService.saveString(
+              key: pSelectCity, value: value[pSelectCity]);
         } else {
           await prefService.preferences?.remove(pSelectCity);
         }
@@ -127,7 +131,10 @@ class HomeScreenController extends GetxController {
 
     ApiService().call(
       url: UrlRes.editProfile,
-      param: {uUserId: PrefService.id.toString(), uSavedPropertyIds: savedPropertyId},
+      param: {
+        uUserId: PrefService.id.toString(),
+        uSavedPropertyIds: savedPropertyId
+      },
       completion: (response) async {
         FetchUser editProfile = FetchUser.fromJson(response);
         await prefService.saveUser(editProfile.data);
@@ -150,5 +157,28 @@ class HomeScreenController extends GetxController {
 
   void onRefresh() {
     fetchHomePageData();
+  }
+
+  void setPropertyMode(String mode) {
+    propertyMode = mode;
+    update(); // تحديث الواجهة
+
+    // يمكن إضافة استدعاء API هنا لجلب العقارات حسب النوع المحدد
+    // _loadPropertiesByMode(mode);
+  }
+
+  void _loadPropertiesByMode(String mode) {
+    // هنا يمكن استدعاء API لجلب العقارات المناسبة
+    // حسب نوع العملية (بيع أو إيجار)
+    // يمكن إضافة معاملات إضافية للـ API call
+    Map<String, dynamic> map = {};
+    map[uUserId] = PrefService.id.toString();
+    map['property_mode'] = mode; // إضافة نوع العملية للمعاملات
+
+    if (lat != 0 && lng != 0) {
+      map[uUserLatitude] = lat.toStringAsFixed(4);
+      map[uUserLongitude] = lng.toStringAsFixed(4);
+      isResetBtnVisible = true;
+    }
   }
 }

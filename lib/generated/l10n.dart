@@ -27,7 +27,9 @@ class S {
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -3504,6 +3506,36 @@ class S {
     return Intl.message(
       'Choose Location',
       name: 'mapScreen',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sale`
+  String get sale {
+    return Intl.message(
+      'Sale',
+      name: 'sale',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rent`
+  String get rent {
+    return Intl.message(
+      'Rent',
+      name: 'rent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `App name `
+  String get appName {
+    return Intl.message(
+      'Arab Real Estate ',
+      name: 'appName',
       desc: '',
       args: [],
     );
