@@ -142,9 +142,8 @@ class HomeScreen extends StatelessWidget {
             );
           }),
     );
-  }
+  } // بناء نظام التبديل بين البيع والإيجار
 
-  // بناء نظام التبديل بين البيع والإيجار
   Widget _buildSaleRentToggle(
       HomeScreenController controller, BuildContext context) {
     return Container(
@@ -172,7 +171,7 @@ class HomeScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(25),
                         ),
                         child: Text(
-                          S.current.sale,
+                          S.current.forSale,
                           textAlign: TextAlign.center,
                           style: MyTextStyle.productMedium(
                             size: 16,
@@ -197,7 +196,7 @@ class HomeScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(25),
                         ),
                         child: Text(
-                          S.current.rent,
+                          S.current.forRent,
                           textAlign: TextAlign.center,
                           style: MyTextStyle.productMedium(
                             size: 16,
@@ -224,13 +223,13 @@ class HomeScreen extends StatelessWidget {
     List<PropertyType> allTypes = controller.homeData?.propertyType ?? [];
 
     if (controller.propertyMode == null || controller.propertyMode == 'sale') {
-      // إرجاع العقارات للبيع
-      // return allTypes
-      //     .where((type) =>
-      //         type.isSale == true ||
-      //         type.category?.toLowerCase().contains('بيع') == true)
-      //     .toList();
-    } else if (controller.propertyMode == 'rent') {
+      //   // إرجاع العقارات للبيع
+      //   return allTypes
+      //       .where((type) =>
+      //           type.propertyMode == "forSale" ||
+      //           type.propertyMode?.toLowerCase().contains('sale') == true)
+      //       .toList();
+      // } else if (controller.propertyMode == 'rent') {
       // إرجاع العقارات للإيجار
       // return allTypes
       //     .where((type) =>
