@@ -5,14 +5,14 @@ class PropertyType {
     int? propertyCategory,
     String? createdAt,
     String? updatedAt,
-    String? propertyMode,
+    int? propertyAvailableFor,
   }) {
     _id = id;
     _title = title;
     _propertyCategory = propertyCategory;
     _createdAt = createdAt;
     _updatedAt = updatedAt;
-    _propertyMode = propertyMode;
+    _propertyAvailableFor = propertyAvailableFor;
   }
 
   PropertyType.fromJson(dynamic json) {
@@ -21,7 +21,7 @@ class PropertyType {
     _propertyCategory = json['property_category'];
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
-    _propertyMode = json['Available'];
+    _propertyAvailableFor = json['property_available_for'];
   }
 
   int? _id;
@@ -29,7 +29,7 @@ class PropertyType {
   int? _propertyCategory;
   String? _createdAt;
   String? _updatedAt;
-  String? _propertyMode;
+  int? _propertyAvailableFor;
 
   int? get id => _id;
 
@@ -41,7 +41,7 @@ class PropertyType {
 
   String? get updatedAt => _updatedAt;
 
-  String? get propertyMode => _propertyMode;
+  int? get propertyAvailableFor => _propertyAvailableFor;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -50,7 +50,7 @@ class PropertyType {
     map['property_category'] = _propertyCategory;
     map['created_at'] = _createdAt;
     map['updated_at'] = _updatedAt;
-    map['Available'] = _propertyMode;
+    map['property_available_for'] = _propertyAvailableFor;
     return map;
   }
 }

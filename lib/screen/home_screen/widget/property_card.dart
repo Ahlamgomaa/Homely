@@ -29,15 +29,19 @@ class PropertyCard extends StatelessWidget {
           Stack(
             children: [
               ImageWidget(
-                  image: CommonFun.getMedia(m: property?.media ?? [], mediaId: 1),
+                  image:
+                      CommonFun.getMedia(m: property?.media ?? [], mediaId: 1),
                   width: Get.width / 2.7,
                   height: 118,
                   borderRadius: 13),
               FeaturedCard(
-                  title: (property?.propertyAvailableFor == 0 ? S.of(context).forSale : S.of(context).forRent),
+                  title: (property?.propertyAvailableFor == 0
+                      ? S.of(context).forSale
+                      : S.of(context).forRent),
                   fontColor: ColorRes.royalBlue,
                   cardColor: ColorRes.white,
-                  margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 8)),
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 8)),
             ],
           ),
           const SizedBox(
@@ -62,14 +66,16 @@ class PropertyCard extends StatelessWidget {
                 ),
                 Text(
                   (property?.propertyType?.title ?? '').toUpperCase(),
-                  style: MyTextStyle.productMedium(size: 12, color: ColorRes.royalBlue),
+                  style: MyTextStyle.productMedium(
+                      size: 12, color: ColorRes.royalBlue),
                 ),
                 const SizedBox(
                   height: 4,
                 ),
                 Text(
                   (property?.address ?? '').capitalize ?? '',
-                  style: MyTextStyle.productLight(size: 15, color: ColorRes.conCord),
+                  style: MyTextStyle.productLight(
+                      size: 15, color: ColorRes.conCord),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
                 ),
@@ -91,7 +97,8 @@ class PropertyCard extends StatelessWidget {
                     ),
                     Flexible(
                       child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 6),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15, vertical: 6),
                         decoration: BoxDecoration(
                           color: ColorRes.royalBlue,
                           borderRadius: BorderRadius.circular(50),
@@ -100,7 +107,8 @@ class PropertyCard extends StatelessWidget {
                           property?.propertyAvailableFor == 0
                               ? '$cDollar${(property?.firstPrice ?? 0).numberFormat}'
                               : '$cDollar${(property?.firstPrice ?? 0).numberFormat}${AppRes.monthly}',
-                          style: MyTextStyle.productMedium(size: 13, color: ColorRes.white),
+                          style: MyTextStyle.productMedium(
+                              size: 13, color: ColorRes.white),
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
                         ),

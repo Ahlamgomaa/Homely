@@ -23,7 +23,8 @@ class HomePageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Visibility(
-      visible: (controller.homeData?.featured == null || controller.homeData!.featured!.isEmpty)
+      visible: (controller.homeData?.featured == null ||
+              controller.homeData!.featured!.isEmpty)
           ? false
           : true,
       child: Column(
@@ -49,18 +50,21 @@ class HomePageView extends StatelessWidget {
                 PropertyData? data = controller.homeData?.featured?[index];
                 return InkWell(
                   onTap: () {
-                    NavigateService.push(context, PropertyDetailScreen(propertyId: data?.id ?? -1))
+                    NavigateService.push(context,
+                            PropertyDetailScreen(propertyId: data?.id ?? -1))
                         .then((value) {
                       controller.fetchHomePageData();
                     });
                   },
                   child: Container(
-                    margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 7),
+                    margin:
+                        const EdgeInsets.symmetric(vertical: 10, horizontal: 7),
                     child: Stack(
                       alignment: Alignment.bottomCenter,
                       children: [
                         ImageWidget(
-                            image: CommonFun.getMedia(m: data?.media ?? [], mediaId: 1),
+                            image: CommonFun.getMedia(
+                                m: data?.media ?? [], mediaId: 1),
                             width: double.infinity,
                             height: Get.height,
                             borderRadius: 30),
@@ -71,7 +75,8 @@ class HomePageView extends StatelessWidget {
                             Align(
                               alignment: Alignment.topLeft,
                               child: Container(
-                                margin: const EdgeInsets.symmetric(horizontal: 10),
+                                margin:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 child: Row(
                                   children: [
                                     FeaturedCard(
@@ -90,13 +95,15 @@ class HomePageView extends StatelessWidget {
                             ),
                             const Spacer(),
                             Container(
-                              margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                              margin: const EdgeInsets.symmetric(
+                                  horizontal: 20, vertical: 20),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
                                   Expanded(
                                     child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           data?.title ?? '',
@@ -130,7 +137,8 @@ class HomePageView extends StatelessWidget {
                                         height: 50,
                                         width: 50,
                                         decoration: BoxDecoration(
-                                          color: ColorRes.white.withValues(alpha: 0.17),
+                                          color: ColorRes.white
+                                              .withValues(alpha: 0.17),
                                           shape: BoxShape.circle,
                                         ),
                                         child: Center(
@@ -138,7 +146,8 @@ class HomePageView extends StatelessWidget {
                                             height: 40,
                                             width: 40,
                                             decoration: BoxDecoration(
-                                                color: ColorRes.white.withValues(alpha: 0.3),
+                                                color: ColorRes.white
+                                                    .withValues(alpha: 0.3),
                                                 shape: BoxShape.circle),
                                             child: Icon(
                                               data?.savedProperty == true

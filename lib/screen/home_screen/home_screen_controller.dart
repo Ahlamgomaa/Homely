@@ -23,7 +23,7 @@ class HomeScreenController extends GetxController {
   double lng = 0;
 
   bool isResetBtnVisible = false;
-  String? propertyMode = 'sale'; // القيمة الافتراضية للبيع
+  String? propertyMode = 'all'; // القيمة الافتراضية للبيع
 
   @override
   void onReady() {
@@ -69,6 +69,7 @@ class HomeScreenController extends GetxController {
         print(homeData?.featured?.length);
         print(homeData?.latestProperties?.length);
         print(homeData?.propertyType?.length);
+        print(homeData?.propertyType);
         isLoading = false;
         update();
       },
@@ -162,23 +163,5 @@ class HomeScreenController extends GetxController {
   void setPropertyMode(String mode) {
     propertyMode = mode;
     update(); // تحديث الواجهة
-
-    // يمكن إضافة استدعاء API هنا لجلب العقارات حسب النوع المحدد
-    // _loadPropertiesByMode(mode);
-  }
-
-  void _loadPropertiesByMode(String mode) {
-    // هنا يمكن استدعاء API لجلب العقارات المناسبة
-    // حسب نوع العملية (بيع أو إيجار)
-    // يمكن إضافة معاملات إضافية للـ API call
-    Map<String, dynamic> map = {};
-    map[uUserId] = PrefService.id.toString();
-    map['property_mode'] = mode; // إضافة نوع العملية للمعاملات
-
-    if (lat != 0 && lng != 0) {
-      map[uUserLatitude] = lat.toStringAsFixed(4);
-      map[uUserLongitude] = lng.toStringAsFixed(4);
-      isResetBtnVisible = true;
-    }
   }
 }

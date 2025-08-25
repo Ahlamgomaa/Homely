@@ -118,10 +118,29 @@ class HomeScreen extends StatelessWidget {
                                         ),
                                       ),
                                     const SizedBox(height: 10),
-                                    HomeLatestProperty(
-                                        latestProperties: controller
-                                                .homeData?.latestProperties ??
-                                            []),
+                                    // فلترة أحدث العقارات حسب وضع العرض (بيع/إيجار/الكل)
+                                    Builder(builder: (context) {
+                                      final allLatest = controller
+                                              .homeData?.latestProperties ??
+                                          [];
+                                      final latest = (controller.propertyMode ==
+                                                  'sale' ||
+                                              controller.propertyMode == null)
+                                          ? allLatest
+                                              .where((p) =>
+                                                  p.propertyAvailableFor == 0)
+                                              .toList()
+                                          : controller.propertyMode == 'rent'
+                                              ? allLatest
+                                                  .where((p) =>
+                                                      p.propertyAvailableFor ==
+                                                      1)
+                                                  .toList()
+                                              : allLatest;
+
+                                      return HomeLatestProperty(
+                                          latestProperties: latest);
+                                    }),
                                   ],
                                 ),
                               ),
@@ -156,8 +175,34 @@ class HomeScreen extends StatelessWidget {
                 color: ColorRes.porcelain,
                 borderRadius: BorderRadius.circular(25),
               ),
+              padding: const EdgeInsets.all(2),
               child: Row(
                 children: [
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () => controller.setPropertyMode('all'),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        decoration: BoxDecoration(
+                          color: controller.propertyMode == 'all'
+                              ? ColorRes.royalBlue
+                              : Colors.transparent,
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        child: Text(
+                          S.current.all,
+                          textAlign: TextAlign.center,
+                          style: MyTextStyle.productMedium(
+                            size: 16,
+                            color: controller.propertyMode == 'all'
+                                ? Colors.white
+                                : ColorRes.royalBlue,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
                   Expanded(
                     child: GestureDetector(
                       onTap: () => controller.setPropertyMode('sale'),
@@ -184,6 +229,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const SizedBox(width: 4),
                   Expanded(
                     child: GestureDetector(
                       onTap: () => controller.setPropertyMode('rent'),
@@ -222,22 +268,13 @@ class HomeScreen extends StatelessWidget {
       HomeScreenController controller) {
     List<PropertyType> allTypes = controller.homeData?.propertyType ?? [];
 
-    if (controller.propertyMode == null || controller.propertyMode == 'sale') {
-      //   // إرجاع العقارات للبيع
-      //   return allTypes
-      //       .where((type) =>
-      //           type.propertyMode == "forSale" ||
-      //           type.propertyMode?.toLowerCase().contains('sale') == true)
-      //       .toList();
-      // } else if (controller.propertyMode == 'rent') {
-      // إرجاع العقارات للإيجار
-      // return allTypes
-      //     .where((type) =>
-      //         type.isRent == true ||
-      //         type.category?.toLowerCase().contains('إيجار') == true)
-      //     .toList();
+    if (controller.propertyMode == 'sale' || controller.propertyMode == null) {
+      return allTypes.where((type) => type.propertyAvailableFor == 0).toList();
+    } else if (controller.propertyMode == 'rent') {
+      return allTypes.where((type) => type.propertyAvailableFor == 1).toList();
     }
 
+// في حالة 'all'
     return allTypes;
   }
 }
