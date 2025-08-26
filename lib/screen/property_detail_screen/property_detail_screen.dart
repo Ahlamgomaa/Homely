@@ -38,7 +38,8 @@ class PropertyDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = PropertyDetailScreenController(propertyId, onUpdate, onUpdateReel);
+    final controller =
+        PropertyDetailScreenController(propertyId, onUpdate, onUpdateReel);
     return Scaffold(
       body: GetBuilder(
         init: controller,
@@ -72,7 +73,8 @@ class PropertyDetailScreen extends StatelessWidget {
                       color: opacity < 0.05
                           ? ColorRes.lightGrey.withValues(alpha: 0.2)
                           : ColorRes.black.withValues(alpha: 0.3),
-                      iconColor: opacity < 0.05 ? ColorRes.balticSea : ColorRes.white,
+                      iconColor:
+                          opacity < 0.05 ? ColorRes.balticSea : ColorRes.white,
                     ),
                   ),
                   centerTitle: false,
@@ -98,7 +100,8 @@ class PropertyDetailScreen extends StatelessWidget {
                       alignment: Alignment.bottomLeft,
                       children: [
                         Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+                          margin: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 15),
                           child: Row(
                             children: [
                               // TopAreaImageCount(
@@ -111,7 +114,8 @@ class PropertyDetailScreen extends StatelessWidget {
 
                               // For All Images
                               InkWell(
-                                onTap: () => controller.onNavigateImageScreen(0),
+                                onTap: () =>
+                                    controller.onNavigateImageScreen(0),
                                 child: TopAreaImageCount(
                                   title: S.current.viewAll,
                                   opacity: opacity,
@@ -122,30 +126,38 @@ class PropertyDetailScreen extends StatelessWidget {
 
                               // For 360 Image view
                               Visibility(
-                                visible:
-                                    CommonFun.getMedia(m: propertyData?.media ?? [], mediaId: 6)
-                                            .isEmpty
-                                        ? false
-                                        : true,
+                                visible: CommonFun.getMedia(
+                                            m: propertyData?.media ?? [],
+                                            mediaId: 6)
+                                        .isEmpty
+                                    ? false
+                                    : true,
                                 child: Opacity(
                                   opacity: opacity,
                                   child: InkWell(
-                                    onTap: () => controller.onNavigateImageScreen(4),
+                                    onTap: () =>
+                                        controller.onNavigateImageScreen(4),
                                     child: SizedBox(
                                       height: 34,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(30),
                                         child: BackdropFilter(
-                                          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                                          filter: ImageFilter.blur(
+                                              sigmaX: 10, sigmaY: 10),
                                           child: Container(
                                             height: 34,
-                                            padding: const EdgeInsets.symmetric(horizontal: 15),
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 15),
                                             decoration: BoxDecoration(
-                                                color: ColorRes.black.withValues(alpha: 0.3),
-                                                borderRadius: BorderRadius.circular(30)),
+                                                color: ColorRes.black
+                                                    .withValues(alpha: 0.3),
+                                                borderRadius:
+                                                    BorderRadius.circular(30)),
                                             alignment: Alignment.center,
-                                            child: Image.asset(AssetRes.threeSixtyIcon,
-                                                color: ColorRes.white, height: 34),
+                                            child: Image.asset(
+                                                AssetRes.threeSixtyIcon,
+                                                color: ColorRes.white,
+                                                height: 34),
                                           ),
                                         ),
                                       ),
@@ -162,20 +174,28 @@ class PropertyDetailScreen extends StatelessWidget {
                                 color: opacity < 0.05
                                     ? ColorRes.lightGrey.withValues(alpha: 0.2)
                                     : ColorRes.black.withValues(alpha: 0.3),
-                                iconColor: opacity < 0.05 ? ColorRes.balticSea : ColorRes.white,
-                                isVisible: PrefService.id != propertyData?.userId,
+                                iconColor: opacity < 0.05
+                                    ? ColorRes.balticSea
+                                    : ColorRes.white,
+                                isVisible:
+                                    PrefService.id != propertyData?.userId,
                               ),
                               const SizedBox(width: 5),
-                              if (controller.propertyData?.userId == PrefService.id)
+                              if (controller.propertyData?.userId ==
+                                  PrefService.id)
                                 BlurBGIcon(
                                   onTap: c.shareProperty,
                                   icon: Icons.share_rounded,
                                   color: opacity < 0.05
-                                      ? ColorRes.lightGrey.withValues(alpha: 0.2)
+                                      ? ColorRes.lightGrey
+                                          .withValues(alpha: 0.2)
                                       : ColorRes.black.withValues(alpha: 0.3),
-                                  iconColor: opacity < 0.05 ? ColorRes.balticSea : ColorRes.white,
+                                  iconColor: opacity < 0.05
+                                      ? ColorRes.balticSea
+                                      : ColorRes.white,
                                 ),
-                              if (controller.propertyData?.userId != PrefService.id)
+                              if (controller.propertyData?.userId !=
+                                  PrefService.id)
                                 PopupMenuButton(
                                   onSelected: controller.onPopupMenuTap,
                                   shape: RoundedRectangleBorder(
@@ -230,15 +250,18 @@ class PropertyDetailScreen extends StatelessWidget {
                                     width: 38,
                                     child: ClipOval(
                                       child: BackdropFilter(
-                                        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                                        filter: ImageFilter.blur(
+                                            sigmaX: 10, sigmaY: 10),
                                         child: Container(
                                           height: 38,
                                           width: 38,
                                           padding: const EdgeInsets.all(8),
                                           decoration: BoxDecoration(
                                               color: opacity < 0.05
-                                                  ? ColorRes.lightGrey.withValues(alpha: 0.2)
-                                                  : ColorRes.black.withValues(alpha: 0.3),
+                                                  ? ColorRes.lightGrey
+                                                      .withValues(alpha: 0.2)
+                                                  : ColorRes.black
+                                                      .withValues(alpha: 0.3),
                                               shape: BoxShape.circle),
                                           alignment: Alignment.center,
                                           child: Image.asset(
@@ -260,7 +283,8 @@ class PropertyDetailScreen extends StatelessWidget {
 
                     /// Background Image
                     background: ImageWidget(
-                      image: CommonFun.getMedia(m: propertyData?.media ?? [], mediaId: 1),
+                      image: CommonFun.getMedia(
+                          m: propertyData?.media ?? [], mediaId: 1),
                       height: Get.height,
                       width: double.infinity,
                       borderRadius: 0,
@@ -290,20 +314,25 @@ class PropertyDetailScreen extends StatelessWidget {
                               ),
                               Text(
                                 propertyData?.address ?? '',
-                                style: MyTextStyle.productLight(size: 15, color: ColorRes.daveGrey),
+                                style: MyTextStyle.productLight(
+                                    size: 15, color: ColorRes.daveGrey),
                               ),
                               Container(
                                 height: 30,
                                 margin: const EdgeInsets.symmetric(vertical: 8),
                                 child: Row(
                                   children: [
-                                    propertyData?.bedrooms != 0 ? const Spacer() : const SizedBox(),
+                                    propertyData?.bedrooms != 0
+                                        ? const Spacer()
+                                        : const SizedBox(),
                                     RowIconWithText(
                                       icon: AssetRes.bedroomIcon,
                                       title: S.current.bedrooms,
                                       isVisible: propertyData?.bedrooms != 0,
                                     ),
-                                    propertyData?.bedrooms != 0 ? const Spacer() : const SizedBox(),
+                                    propertyData?.bedrooms != 0
+                                        ? const Spacer()
+                                        : const SizedBox(),
                                     Visibility(
                                       visible: propertyData?.bedrooms != 0,
                                       child: const VerticalDivider(
@@ -334,11 +363,11 @@ class PropertyDetailScreen extends StatelessWidget {
                                     propertyData?.bathrooms != 0
                                         ? const Spacer()
                                         : const SizedBox(),
-                                    RowIconWithText(
-                                      icon: AssetRes.sqftIcon,
-                                      title: '${propertyData?.area ?? ''} ${S.current.sqft}',
-                                      isVisible: true,
-                                    ),
+                                    // RowIconWithText(
+                                    //   icon: AssetRes.sqftIcon,
+                                    //   title: '${propertyData?.area ?? ''} ${S.current.sqft}',
+                                    //   isVisible: true,
+                                    // ),
                                     const Spacer(),
                                   ],
                                 ),
@@ -352,15 +381,18 @@ class PropertyDetailScreen extends StatelessWidget {
                         if (propertyData != null)
                           Obx(
                             () {
-                              return controller.isMapVisible && !isSubscribe.value
+                              return controller.isMapVisible &&
+                                      !isSubscribe.value
                                   ? const BannerAdsWidget()
                                   : const SizedBox();
                             },
                           ),
-                        const Divider(color: ColorRes.lightGrey, thickness: 0.5),
+                        const Divider(
+                            color: ColorRes.lightGrey, thickness: 0.5),
                         if ((propertyData?.about ?? '').isNotEmpty)
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 15, vertical: 10),
                             child: DetectableText(
                               text: propertyData?.about ?? '',
                               detectionRegExp: RegExp(r"\B#\w\w+"),
@@ -368,10 +400,10 @@ class PropertyDetailScreen extends StatelessWidget {
                                 size: 16,
                                 color: ColorRes.doveGrey,
                               ),
-                              moreStyle:
-                                  MyTextStyle.productMedium(size: 14, color: ColorRes.royalBlue),
-                              lessStyle:
-                                  MyTextStyle.productMedium(size: 14, color: ColorRes.royalBlue),
+                              moreStyle: MyTextStyle.productMedium(
+                                  size: 14, color: ColorRes.royalBlue),
+                              lessStyle: MyTextStyle.productMedium(
+                                  size: 14, color: ColorRes.royalBlue),
                             ),
                           ),
                         if ((propertyData?.about ?? '').isNotEmpty)
@@ -379,11 +411,16 @@ class PropertyDetailScreen extends StatelessWidget {
                             color: ColorRes.lightGrey,
                             thickness: 0.5,
                           ),
-                        if (controller.propertyData != null) PropertyLocation(controller: c),
-                        if (controller.propertyData != null) Utilities(controller: c),
-                        if (controller.propertyData != null) Details(controller: c),
-                        if (controller.propertyData != null) ContactInformation(controller: c),
-                        if (controller.propertyData != null) RelatedProperties(controller: c)
+                        if (controller.propertyData != null)
+                          PropertyLocation(controller: c),
+                        if (controller.propertyData != null)
+                          Utilities(controller: c),
+                        if (controller.propertyData != null)
+                          Details(controller: c),
+                        if (controller.propertyData != null)
+                          ContactInformation(controller: c),
+                        if (controller.propertyData != null)
+                          RelatedProperties(controller: c)
                       ],
                     ),
                   ),
@@ -403,7 +440,10 @@ class RowIconWithText extends StatelessWidget {
   final bool isVisible;
 
   const RowIconWithText(
-      {super.key, required this.icon, required this.title, required this.isVisible});
+      {super.key,
+      required this.icon,
+      required this.title,
+      required this.isVisible});
 
   @override
   Widget build(BuildContext context) {
@@ -419,7 +459,8 @@ class RowIconWithText extends StatelessWidget {
           ),
           Text(
             '  $title',
-            style: MyTextStyle.productLight(color: ColorRes.silverChalice, size: 15),
+            style: MyTextStyle.productLight(
+                color: ColorRes.silverChalice, size: 15),
           ),
         ],
       ),
@@ -433,7 +474,10 @@ class TopAreaImageCount extends StatelessWidget {
   final String title;
 
   const TopAreaImageCount(
-      {super.key, required this.opacity, this.isImageVisible = false, required this.title});
+      {super.key,
+      required this.opacity,
+      this.isImageVisible = false,
+      required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -482,8 +526,8 @@ class TopAreaImageCount extends StatelessWidget {
                     ),
                     Text(
                       title,
-                      style:
-                          MyTextStyle.productRegular(size: 13, color: ColorRes.lavenderPinocchio),
+                      style: MyTextStyle.productRegular(
+                          size: 13, color: ColorRes.lavenderPinocchio),
                     ),
                   ],
                 ),
@@ -511,11 +555,15 @@ class ForSaleCard extends StatelessWidget {
           decoration: BoxDecoration(
             color: ColorRes.royalBlue,
             borderRadius: CommonFun.getRadius(
-                radius: 30, isRTL: Directionality.of(context) == TextDirection.rtl),
+                radius: 30,
+                isRTL: Directionality.of(context) == TextDirection.rtl),
           ),
           alignment: Alignment.center,
           child: Text(
-            (data?.propertyAvailableFor == 0 ? S.current.forSale : S.current.forRent).toUpperCase(),
+            (data?.propertyAvailableFor == 0
+                    ? S.current.forSale
+                    : S.current.forRent)
+                .toUpperCase(),
             style: MyTextStyle.productMedium(size: 12, color: ColorRes.white),
           ),
         ),

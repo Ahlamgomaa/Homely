@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:get/get.dart';
 import 'package:homely/common/common_ui.dart';
 import 'package:homely/common/widget/dashboard_top_bar.dart';
@@ -13,10 +12,11 @@ import 'package:homely/screen/profile_screen/profile_screen_controller.dart';
 import 'package:homely/screen/reels_screen/reels_screen.dart';
 import 'package:homely/screen/your_reels_screen/widget/reel_grid_card_widget.dart';
 import 'package:homely/screen/your_reels_screen/your_reels_screen.dart';
-import 'package:homely/utils/asset_res.dart';
 import 'package:homely/utils/color_res.dart';
 import 'package:homely/utils/extension.dart';
 import 'package:homely/utils/my_text_style.dart';
+
+import '../../common/widget/custom_action_button.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -305,79 +305,6 @@ class ProfileScreen extends StatelessWidget {
             ),
           );
         });
-  }
-}
-
-class CustomActionButton extends StatelessWidget {
-  final Function(int index) onTap;
-
-  const CustomActionButton({super.key, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    final isRtl = Directionality.of(context) == TextDirection.rtl;
-
-    return SpeedDial(
-      icon: Icons.add,
-      overlayColor: ColorRes.black,
-      backgroundColor: ColorRes.royalBlue,
-      activeIcon: Icons.clear,
-      children: [
-        SpeedDialChild(
-          onTap: () => onTap(1),
-          labelWidget: Transform.translate(
-            offset: Offset(isRtl ? 52 : 0, 0),
-            child: LabelWidget(
-              image: AssetRes.icReelsIcon,
-              title: S.current.addReel,
-            ),
-          ),
-        ),
-        SpeedDialChild(
-          onTap: () => onTap(2),
-          labelWidget: Transform.translate(
-            offset: Offset(isRtl ? 52 : 0, 0),
-            child: LabelWidget(
-              image: AssetRes.homeDashboardIcon,
-              title: S.current.addProperty,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class LabelWidget extends StatelessWidget {
-  final String image;
-  final String title;
-
-  const LabelWidget({super.key, required this.image, required this.title});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: ColorRes.whiteSmoke,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Row(
-        children: [
-          Image.asset(
-            image,
-            color: ColorRes.royalBlue,
-            height: 20,
-            width: 20,
-          ),
-          const SizedBox(width: 10),
-          Text(
-            title,
-            style: MyTextStyle.productMedium(),
-          ),
-        ],
-      ),
-    );
   }
 }
 

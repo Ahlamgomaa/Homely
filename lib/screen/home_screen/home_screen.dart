@@ -12,6 +12,7 @@ import 'package:homely/screen/property_type_screen/property_type_screen.dart';
 import 'package:homely/service/navigate_service.dart';
 import 'package:homely/utils/color_res.dart';
 import 'package:homely/utils/my_text_style.dart';
+import '../../common/widget/custom_action_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -160,6 +161,9 @@ class HomeScreen extends StatelessWidget {
               ],
             );
           }),
+      floatingActionButton: CustomActionButton(
+        onTap: controller.onActionButtonTap,
+      ),
     );
   } // بناء نظام التبديل بين البيع والإيجار
 

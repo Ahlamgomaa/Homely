@@ -33,10 +33,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "addReel": MessageLookupByLibrary.simpleMessage("添加卷轴"),
         "addUtilities": MessageLookupByLibrary.simpleMessage("添加实用程序"),
         "addressOptional": MessageLookupByLibrary.simpleMessage("地址（可选）"),
-        "adsWillBeShownOnYourProfile": MessageLookupByLibrary.simpleMessage("广告将显示在您的个人资料上"),
+        "adsWillBeShownOnYourProfile": MessageLookupByLibrary.simpleMessage(
+          "广告将显示在您的个人资料上",
+        ),
         "after3DayTrialThisSubscriptionAutomaticallyRenewsAsPer":
             MessageLookupByLibrary.simpleMessage(
-                "经过 3 天试用，此订阅将根据计划自动续订。除非在当前期限结束前 24 小时内取消，否则订阅将自动续订。您可以随时从 Apple 设置管理和取消订阅。"),
+          "经过 3 天试用，此订阅将根据计划自动续订。除非在当前期限结束前 24 小时内取消，否则订阅将自动续订。您可以随时从 Apple 设置管理和取消订阅。",
+        ),
         "agency": MessageLookupByLibrary.simpleMessage("机构"),
         "airport": MessageLookupByLibrary.simpleMessage("飞机场"),
         "all": MessageLookupByLibrary.simpleMessage("全部"),
@@ -48,10 +51,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSureYouWantToDeleteTheReelPermanently":
             MessageLookupByLibrary.simpleMessage("您确定要永久删除卷轴吗"),
         "areYouSureYouWantToDeleteYourAccountThis":
-            MessageLookupByLibrary.simpleMessage("您确定要删除您的帐户吗？ 此操作是不可逆转的。 您的所有数据将被永久删除"),
+            MessageLookupByLibrary.simpleMessage(
+          "您确定要删除您的帐户吗？ 此操作是不可逆转的。 您的所有数据将被永久删除",
+        ),
         "areYouSureYouWantToDeleteYourProperty":
             MessageLookupByLibrary.simpleMessage("你确定吗？ 您想删除您的财产。"),
-        "areYouSureYouWantToLogOut": MessageLookupByLibrary.simpleMessage("您确定要退出吗？"),
+        "areYouSureYouWantToLogOut": MessageLookupByLibrary.simpleMessage(
+          "您确定要退出吗？",
+        ),
         "area": MessageLookupByLibrary.simpleMessage("区域"),
         "areaRange": MessageLookupByLibrary.simpleMessage("面积范围"),
         "attachYourProperty": MessageLookupByLibrary.simpleMessage("附加您的财产"),
@@ -68,7 +75,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "buildYear": MessageLookupByLibrary.simpleMessage("建造年份"),
         "builtYear": MessageLookupByLibrary.simpleMessage("建成年份"),
         "buyer": MessageLookupByLibrary.simpleMessage("买方"),
-        "byProceedingForwardYouAgreeToThe": MessageLookupByLibrary.simpleMessage("继续前进即表示您同意"),
+        "byProceedingForwardYouAgreeToThe":
+            MessageLookupByLibrary.simpleMessage(
+          "继续前进即表示您同意",
+        ),
         "cancelAnytime": MessageLookupByLibrary.simpleMessage("随时取消"),
         "captureImage": MessageLookupByLibrary.simpleMessage("捕捉图像"),
         "captureVideo": MessageLookupByLibrary.simpleMessage("捕捉视频"),
@@ -104,15 +114,24 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("邮件发送成功！！！ 请检查您的邮件。"),
         "ended": MessageLookupByLibrary.simpleMessage("结束"),
         "enquireInfo": MessageLookupByLibrary.simpleMessage("查询信息"),
-        "enterTheDescriptionMoreAboutReason": MessageLookupByLibrary.simpleMessage("输入更多有关原因的描述"),
-        "enterYourAreaOrApartmentName": MessageLookupByLibrary.simpleMessage("输入您的地区或公寓名称"),
-        "enterYourReasonWhyAreYouReport": MessageLookupByLibrary.simpleMessage("输入您的原因 您为何举报"),
+        "enterTheDescriptionMoreAboutReason":
+            MessageLookupByLibrary.simpleMessage(
+          "输入更多有关原因的描述",
+        ),
+        "enterYourAreaOrApartmentName": MessageLookupByLibrary.simpleMessage(
+          "输入您的地区或公寓名称",
+        ),
+        "enterYourReasonWhyAreYouReport": MessageLookupByLibrary.simpleMessage(
+          "输入您的原因 您为何举报",
+        ),
         "facing": MessageLookupByLibrary.simpleMessage("面向"),
         "faqs": MessageLookupByLibrary.simpleMessage("常见问题解答"),
         "fax": MessageLookupByLibrary.simpleMessage("传真"),
         "faxOptional": MessageLookupByLibrary.simpleMessage("传真（可选）"),
         "featured": MessageLookupByLibrary.simpleMessage("精选"),
-        "firstImageWillFeaturedImage": MessageLookupByLibrary.simpleMessage("（第一张图片将是特色图片）"),
+        "firstImageWillFeaturedImage": MessageLookupByLibrary.simpleMessage(
+          "（第一张图片将是特色图片）",
+        ),
         "firstPrice": MessageLookupByLibrary.simpleMessage("第一价格"),
         "floorNumber": MessageLookupByLibrary.simpleMessage("楼层数"),
         "floorPlanImages": MessageLookupByLibrary.simpleMessage("平面图图像"),
@@ -132,18 +151,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullname": MessageLookupByLibrary.simpleMessage("全名"),
         "furnished": MessageLookupByLibrary.simpleMessage("家具齐全"),
         "furniture": MessageLookupByLibrary.simpleMessage("家具"),
-        "gasoline": MessageLookupByLibrary.simpleMessage("汽油"),
         "getVerifiedBadge": MessageLookupByLibrary.simpleMessage("获取已验证徽章"),
         "gym": MessageLookupByLibrary.simpleMessage("健身房"),
         "home": MessageLookupByLibrary.simpleMessage("家"),
         "hospital": MessageLookupByLibrary.simpleMessage("医院"),
         "iAmABroker": MessageLookupByLibrary.simpleMessage("我是经纪人"),
         "ifAppearsThatCameraPermissionHasNotBeenGrantedTo":
-            MessageLookupByLibrary.simpleMessage("如果显示未授予相机权限。对于应用程序，您需要从设置中允许访问相机。"),
+            MessageLookupByLibrary.simpleMessage(
+          "如果显示未授予相机权限。对于应用程序，您需要从设置中允许访问相机。",
+        ),
         "ifYouGoBackNowYouWillLoseAnyChanges":
-            MessageLookupByLibrary.simpleMessage("如果您现在返回，您将丢失所做的任何更改。"),
+            MessageLookupByLibrary.simpleMessage(
+          "如果您现在返回，您将丢失所做的任何更改。",
+        ),
         "ifYouUnblockHeMayBeAbleToSeeYour":
-            MessageLookupByLibrary.simpleMessage("如果你解封的话。 他也许能看到你的财产"),
+            MessageLookupByLibrary.simpleMessage(
+          "如果你解封的话。 他也许能看到你的财产",
+        ),
         "images": MessageLookupByLibrary.simpleMessage("图片"),
         "itSeemsYouHaveSelectedPastTimePleaseSelectFuture":
             MessageLookupByLibrary.simpleMessage("您似乎选择了过去时间，请选择未来时间"),
@@ -155,7 +179,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "location": MessageLookupByLibrary.simpleMessage("地点"),
         "locationFetched": MessageLookupByLibrary.simpleMessage("已获取位置"),
         "locationNotFound": MessageLookupByLibrary.simpleMessage("未找到位置！！！"),
-        "locationServicesAreDisabled": MessageLookupByLibrary.simpleMessage("定位服务被禁用。"),
+        "locationServicesAreDisabled": MessageLookupByLibrary.simpleMessage(
+          "定位服务被禁用。",
+        ),
         "logIn": MessageLookupByLibrary.simpleMessage("登录"),
         "logOut": MessageLookupByLibrary.simpleMessage("登出"),
         "logout": MessageLookupByLibrary.simpleMessage("登出"),
@@ -186,7 +212,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "noReelsFound": MessageLookupByLibrary.simpleMessage("未找到卷轴"),
         "noReelsUploaded": MessageLookupByLibrary.simpleMessage("未上传卷轴"),
         "noSavedProperty": MessageLookupByLibrary.simpleMessage("没有保存的财产"),
-        "noUserFoundForThatEmail": MessageLookupByLibrary.simpleMessage("没有找到该电子邮件的用户。"),
+        "noUserFoundForThatEmail": MessageLookupByLibrary.simpleMessage(
+          "没有找到该电子邮件的用户。",
+        ),
         "notFurnished": MessageLookupByLibrary.simpleMessage("不带家具"),
         "notification": MessageLookupByLibrary.simpleMessage("通知"),
         "office": MessageLookupByLibrary.simpleMessage("办公室"),
@@ -201,54 +229,102 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("密码"),
         "passwordNotMatch": MessageLookupByLibrary.simpleMessage("密码不匹配"),
         "payments": MessageLookupByLibrary.simpleMessage("付款方式"),
-        "phoneOfficeOptional": MessageLookupByLibrary.simpleMessage("电话办公室（可选）"),
+        "phoneOfficeOptional":
+            MessageLookupByLibrary.simpleMessage("电话办公室（可选）"),
         "photo": MessageLookupByLibrary.simpleMessage("照片"),
         "platform": MessageLookupByLibrary.simpleMessage("平台"),
-        "pleaseAddAtLeastOneOverviewImage": MessageLookupByLibrary.simpleMessage("请添加至少一张概览图片"),
-        "pleaseAddAtLeastOnePropertyVideo": MessageLookupByLibrary.simpleMessage("请添加至少一个房产视频"),
-        "pleaseAttachYourProperty": MessageLookupByLibrary.simpleMessage("请附加您的财产"),
+        "pleaseAddAtLeastOneOverviewImage":
+            MessageLookupByLibrary.simpleMessage(
+          "请添加至少一张概览图片",
+        ),
+        "pleaseAddAtLeastOnePropertyVideo":
+            MessageLookupByLibrary.simpleMessage(
+          "请添加至少一个房产视频",
+        ),
+        "pleaseAttachYourProperty":
+            MessageLookupByLibrary.simpleMessage("请附加您的财产"),
         "pleaseConfigureSubscriptionMoreInfoHere":
             MessageLookupByLibrary.simpleMessage("请配置订阅。更多信息请见："),
-        "pleaseEnterAboutYourself": MessageLookupByLibrary.simpleMessage("请输入有关您自己的信息"),
+        "pleaseEnterAboutYourself": MessageLookupByLibrary.simpleMessage(
+          "请输入有关您自己的信息",
+        ),
         "pleaseEnterBuiltYear": MessageLookupByLibrary.simpleMessage("请输入建造年份"),
-        "pleaseEnterConfirmPassword": MessageLookupByLibrary.simpleMessage("请输入确认密码"),
-        "pleaseEnterCurrentPassword": MessageLookupByLibrary.simpleMessage("请输入当前密码"),
+        "pleaseEnterConfirmPassword": MessageLookupByLibrary.simpleMessage(
+          "请输入确认密码",
+        ),
+        "pleaseEnterCurrentPassword": MessageLookupByLibrary.simpleMessage(
+          "请输入当前密码",
+        ),
         "pleaseEnterEmail": MessageLookupByLibrary.simpleMessage("请输入电子邮件"),
         "pleaseEnterFullname": MessageLookupByLibrary.simpleMessage("请输入全名"),
-        "pleaseEnterNewPassword": MessageLookupByLibrary.simpleMessage("请输入新密码"),
+        "pleaseEnterNewPassword":
+            MessageLookupByLibrary.simpleMessage("请输入新密码"),
         "pleaseEnterPassword": MessageLookupByLibrary.simpleMessage("请输入密码"),
-        "pleaseEnterPropertyTitle": MessageLookupByLibrary.simpleMessage("请输入房产名称"),
-        "pleaseEnterRetypePassword": MessageLookupByLibrary.simpleMessage("请输入重新输入密码"),
+        "pleaseEnterPropertyTitle":
+            MessageLookupByLibrary.simpleMessage("请输入房产名称"),
+        "pleaseEnterRetypePassword": MessageLookupByLibrary.simpleMessage(
+          "请输入重新输入密码",
+        ),
         "pleaseEnterYourArea": MessageLookupByLibrary.simpleMessage("请输入您的区域"),
-        "pleaseEnterYourDescription": MessageLookupByLibrary.simpleMessage("请输入您的描述"),
-        "pleaseEnterYourGasolineDistance": MessageLookupByLibrary.simpleMessage("请输入您的汽油距离"),
-        "pleaseEnterYourGymDistance": MessageLookupByLibrary.simpleMessage("请输入您的健身房距离"),
-        "pleaseEnterYourHospitalDistance": MessageLookupByLibrary.simpleMessage("请输入您的医院距离"),
+        "pleaseEnterYourDescription": MessageLookupByLibrary.simpleMessage(
+          "请输入您的描述",
+        ),
+        "pleaseEnterYourGasolineDistance": MessageLookupByLibrary.simpleMessage(
+          "请输入您的汽油距离",
+        ),
+        "pleaseEnterYourGymDistance": MessageLookupByLibrary.simpleMessage(
+          "请输入您的健身房距离",
+        ),
+        "pleaseEnterYourHospitalDistance": MessageLookupByLibrary.simpleMessage(
+          "请输入您的医院距离",
+        ),
         "pleaseEnterYourMaintenanceInMonthAmount":
             MessageLookupByLibrary.simpleMessage("请输入您的每月维护金额"),
-        "pleaseEnterYourMarketDistance": MessageLookupByLibrary.simpleMessage("请输入您的市场距离"),
-        "pleaseEnterYourPropertyAddress": MessageLookupByLibrary.simpleMessage("请输入您的房产地址"),
-        "pleaseEnterYourSchoolDistance": MessageLookupByLibrary.simpleMessage("请输入您的学校距离"),
+        "pleaseEnterYourMarketDistance": MessageLookupByLibrary.simpleMessage(
+          "请输入您的市场距离",
+        ),
+        "pleaseEnterYourPropertyAddress": MessageLookupByLibrary.simpleMessage(
+          "请输入您的房产地址",
+        ),
+        "pleaseEnterYourSchoolDistance": MessageLookupByLibrary.simpleMessage(
+          "请输入您的学校距离",
+        ),
         "pleaseExplainAboutYourIssueBrieflyWeWillSureLook":
             MessageLookupByLibrary.simpleMessage("请简要解释您的问题。 我们一定会调查此事并采取行动。"),
-        "pleaseFetchYourPropertyLocation": MessageLookupByLibrary.simpleMessage("请获取您的房产位置"),
+        "pleaseFetchYourPropertyLocation": MessageLookupByLibrary.simpleMessage(
+          "请获取您的房产位置",
+        ),
         "pleaseFillYourDetailsAndCompleteRegistrationToStartExploreRent":
-            MessageLookupByLibrary.simpleMessage("请填写您的详细信息并完成\n注册，以开始通过您的智能手机探索、租赁、购买或出售\n房地产。"),
+            MessageLookupByLibrary.simpleMessage(
+          "请填写您的详细信息并完成\n注册，以开始通过您的智能手机探索、租赁、购买或出售\n房地产。",
+        ),
         "pleaseProvideMeMoreDetailsOnThisPropertyIAm":
             MessageLookupByLibrary.simpleMessage("请向我提供有关此房产的更多详细信息。 我有兴趣 ！"),
         "pleaseSelectAnyOfTheAppropriateOptionFromBelowThat":
             MessageLookupByLibrary.simpleMessage("请从下面选择任何适合描述您自己的选项。"),
-        "pleaseSelectAnyYourType": MessageLookupByLibrary.simpleMessage("请选择您的类型"),
+        "pleaseSelectAnyYourType":
+            MessageLookupByLibrary.simpleMessage("请选择您的类型"),
         "pleaseSelectBathrooms": MessageLookupByLibrary.simpleMessage("请选择浴室"),
         "pleaseSelectBedrooms": MessageLookupByLibrary.simpleMessage("请选择卧室"),
-        "pleaseSelectCarParking": MessageLookupByLibrary.simpleMessage("请选择停车位"),
+        "pleaseSelectCarParking":
+            MessageLookupByLibrary.simpleMessage("请选择停车位"),
         "pleaseSelectImage": MessageLookupByLibrary.simpleMessage("请选择图片"),
-        "pleaseSelectPropertyType": MessageLookupByLibrary.simpleMessage("请选择房产类型"),
-        "pleaseSelectYourBuildingFace": MessageLookupByLibrary.simpleMessage("请选择您的建筑面貌"),
-        "pleaseSelectYourFloor": MessageLookupByLibrary.simpleMessage("请选择您的楼层"),
-        "pleaseSelectYourFloorNumber": MessageLookupByLibrary.simpleMessage("请选择您的楼层数"),
-        "pleaseSelectYourSupportSubject": MessageLookupByLibrary.simpleMessage("请选择您的支持主题"),
-        "pleaseVerifiedYourEmail": MessageLookupByLibrary.simpleMessage("请验证您的电子邮件"),
+        "pleaseSelectPropertyType":
+            MessageLookupByLibrary.simpleMessage("请选择房产类型"),
+        "pleaseSelectYourBuildingFace": MessageLookupByLibrary.simpleMessage(
+          "请选择您的建筑面貌",
+        ),
+        "pleaseSelectYourFloor":
+            MessageLookupByLibrary.simpleMessage("请选择您的楼层"),
+        "pleaseSelectYourFloorNumber": MessageLookupByLibrary.simpleMessage(
+          "请选择您的楼层数",
+        ),
+        "pleaseSelectYourSupportSubject": MessageLookupByLibrary.simpleMessage(
+          "请选择您的支持主题",
+        ),
+        "pleaseVerifiedYourEmail": MessageLookupByLibrary.simpleMessage(
+          "请验证您的电子邮件",
+        ),
         "pool": MessageLookupByLibrary.simpleMessage("水池"),
         "pricing": MessageLookupByLibrary.simpleMessage("价钱"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("隐私政策"),
@@ -278,7 +354,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("登记"),
         "registration": MessageLookupByLibrary.simpleMessage("登记"),
         "relatedProperties": MessageLookupByLibrary.simpleMessage("相关属性"),
-        "removeDisturbingAds": MessageLookupByLibrary.simpleMessage("删除令人不安的广告"),
+        "removeDisturbingAds":
+            MessageLookupByLibrary.simpleMessage("删除令人不安的广告"),
         "report": MessageLookupByLibrary.simpleMessage("报告"),
         "reportProperty": MessageLookupByLibrary.simpleMessage("报告物业"),
         "reportReason": MessageLookupByLibrary.simpleMessage("举报原因"),
@@ -306,7 +383,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectMedia": MessageLookupByLibrary.simpleMessage("选择媒体"),
         "selectPriceRange": MessageLookupByLibrary.simpleMessage("选择价格范围"),
         "selectProperty": MessageLookupByLibrary.simpleMessage("选择房产"),
-        "selectPropertyVideoFile": MessageLookupByLibrary.simpleMessage("选择属性视频文件"),
+        "selectPropertyVideoFile":
+            MessageLookupByLibrary.simpleMessage("选择属性视频文件"),
         "selectSupport": MessageLookupByLibrary.simpleMessage("选择支持"),
         "selectTime": MessageLookupByLibrary.simpleMessage("选择时间"),
         "selectType": MessageLookupByLibrary.simpleMessage("选择类型"),
@@ -323,9 +401,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "showAll": MessageLookupByLibrary.simpleMessage("显示所有"),
         "signIn": MessageLookupByLibrary.simpleMessage("登入"),
         "societyName": MessageLookupByLibrary.simpleMessage("社团名称"),
-        "societyNameIsCompulsoryPleaseEnter": MessageLookupByLibrary.simpleMessage("社团名称为必填项，请输入"),
+        "societyNameIsCompulsoryPleaseEnter":
+            MessageLookupByLibrary.simpleMessage(
+          "社团名称为必填项，请输入",
+        ),
         "somethingWentWrong": MessageLookupByLibrary.simpleMessage("出了些问题"),
-        "somethingWentWrongTryAgain": MessageLookupByLibrary.simpleMessage("出了点问题重试"),
+        "somethingWentWrongTryAgain": MessageLookupByLibrary.simpleMessage(
+          "出了点问题重试",
+        ),
         "sqft": MessageLookupByLibrary.simpleMessage("平方英尺"),
         "studio": MessageLookupByLibrary.simpleMessage("工作室"),
         "subject": MessageLookupByLibrary.simpleMessage("主题"),
@@ -340,10 +423,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "termsConditions": MessageLookupByLibrary.simpleMessage("条款及条件"),
         "termsOfUse": MessageLookupByLibrary.simpleMessage("使用条款"),
         "threeSixtyImages": MessageLookupByLibrary.simpleMessage("360° 图像"),
-        "thumbnailGeneratingPleaseWait": MessageLookupByLibrary.simpleMessage("缩略图生成...请等待"),
-        "thumbnailGeneratingSuccessfully": MessageLookupByLibrary.simpleMessage("缩略图生成...成功！！！"),
+        "thumbnailGeneratingPleaseWait": MessageLookupByLibrary.simpleMessage(
+          "缩略图生成...请等待",
+        ),
+        "thumbnailGeneratingSuccessfully": MessageLookupByLibrary.simpleMessage(
+          "缩略图生成...成功！！！",
+        ),
         "to": MessageLookupByLibrary.simpleMessage("到"),
-        "toAccessYourCameraAndMicrophone": MessageLookupByLibrary.simpleMessage("访问您的相机和麦克风"),
+        "toAccessYourCameraAndMicrophone": MessageLookupByLibrary.simpleMessage(
+          "访问您的相机和麦克风",
+        ),
         "toBuyProperty": MessageLookupByLibrary.simpleMessage("购买房产"),
         "toSellProperty": MessageLookupByLibrary.simpleMessage("出售财产"),
         "toSetANewPasswordPleaseEnterYourCurrentPassword":
@@ -351,8 +440,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "tooLargeVideo": MessageLookupByLibrary.simpleMessage("视频太大。"),
         "totalFloors": MessageLookupByLibrary.simpleMessage("总楼层数"),
         "tourRequestsReceived": MessageLookupByLibrary.simpleMessage("收到的旅游请求"),
-        "tourRequestsSubmitted": MessageLookupByLibrary.simpleMessage("已提交旅游请求"),
-        "trySuratGujaratEtc": MessageLookupByLibrary.simpleMessage("尝试苏拉特、古吉拉特邦等。"),
+        "tourRequestsSubmitted":
+            MessageLookupByLibrary.simpleMessage("已提交旅游请求"),
+        "trySuratGujaratEtc":
+            MessageLookupByLibrary.simpleMessage("尝试苏拉特、古吉拉特邦等。"),
         "unavailable": MessageLookupByLibrary.simpleMessage("不可用"),
         "unblock": MessageLookupByLibrary.simpleMessage("解锁"),
         "upcoming": MessageLookupByLibrary.simpleMessage("即将推出"),
@@ -374,24 +465,41 @@ class MessageLookup extends MessageLookupByLibrary {
         "whyGoWith": MessageLookupByLibrary.simpleMessage("为什么选择"),
         "writeDescriptionHere": MessageLookupByLibrary.simpleMessage("在此处写描述"),
         "writeHere": MessageLookupByLibrary.simpleMessage("写在这里"),
-        "wrongPasswordProvidedForThatUser": MessageLookupByLibrary.simpleMessage("为该用户提供的密码错误。"),
+        "wrongPasswordProvidedForThatUser":
+            MessageLookupByLibrary.simpleMessage(
+          "为该用户提供的密码错误。",
+        ),
         "yes": MessageLookupByLibrary.simpleMessage("是的"),
         "youAreBlockFrom": MessageLookupByLibrary.simpleMessage("您被阻止了"),
         "youAreLookingFor": MessageLookupByLibrary.simpleMessage("您正在寻找"),
-        "youAreReportingThisReel": MessageLookupByLibrary.simpleMessage("您正在报告此卷轴"),
-        "youAreReportingThisUser": MessageLookupByLibrary.simpleMessage("您正在举报该用户"),
-        "youCanListMaximum5Properties": MessageLookupByLibrary.simpleMessage("您最多可​​以列出 5 个物业"),
-        "youCanListUnlimitedProperties": MessageLookupByLibrary.simpleMessage("列出无限房产"),
-        "youCanUploadMaximum10Reels": MessageLookupByLibrary.simpleMessage("您最多可​​以上传 10 个卷轴"),
-        "youCanUploadUnlimitedReels": MessageLookupByLibrary.simpleMessage("发布无限卷轴"),
-        "youNotAllowPhotoAccess": MessageLookupByLibrary.simpleMessage("您不允许访问照片"),
+        "youAreReportingThisReel":
+            MessageLookupByLibrary.simpleMessage("您正在报告此卷轴"),
+        "youAreReportingThisUser":
+            MessageLookupByLibrary.simpleMessage("您正在举报该用户"),
+        "youCanListMaximum5Properties": MessageLookupByLibrary.simpleMessage(
+          "您最多可​​以列出 5 个物业",
+        ),
+        "youCanListUnlimitedProperties": MessageLookupByLibrary.simpleMessage(
+          "列出无限房产",
+        ),
+        "youCanUploadMaximum10Reels": MessageLookupByLibrary.simpleMessage(
+          "您最多可​​以上传 10 个卷轴",
+        ),
+        "youCanUploadUnlimitedReels": MessageLookupByLibrary.simpleMessage(
+          "发布无限卷轴",
+        ),
+        "youNotAllowPhotoAccess":
+            MessageLookupByLibrary.simpleMessage("您不允许访问照片"),
         "yourEmailNotCorrectPleaseEnterCorrectEmail":
             MessageLookupByLibrary.simpleMessage("您的邮箱不正确！！！ 请输入正确的电子邮件"),
-        "yourPasswordHasBeenUpdate": MessageLookupByLibrary.simpleMessage("您的密码已更新。"),
-        "yourPasswordsDoNotMatch": MessageLookupByLibrary.simpleMessage("您的密码不匹配。"),
+        "yourPasswordHasBeenUpdate": MessageLookupByLibrary.simpleMessage(
+          "您的密码已更新。",
+        ),
+        "yourPasswordsDoNotMatch":
+            MessageLookupByLibrary.simpleMessage("您的密码不匹配。"),
         "yourProperties": MessageLookupByLibrary.simpleMessage("您的财产"),
         "yourReels": MessageLookupByLibrary.simpleMessage("您的卷轴"),
         "yourUploadLimitIsReachednpleaseSubscribeToGetMoreUploads":
-            MessageLookupByLibrary.simpleMessage("您的上传限制已用尽！\n请订阅高级计划以取消限制。")
+            MessageLookupByLibrary.simpleMessage("您的上传限制已用尽！\n请订阅高级计划以取消限制。"),
       };
 }

@@ -15,6 +15,7 @@ import 'package:homely/service/api_service.dart';
 import 'package:homely/service/pref_service.dart';
 import 'package:homely/service/subscription_manager.dart';
 import 'package:homely/utils/url_res.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProfileScreenController extends GetxController {
   UserData? userData;
@@ -22,6 +23,7 @@ class ProfileScreenController extends GetxController {
   late List<CameraDescription> cameras;
   bool isLoading = false;
   SettingData? settingData;
+  String whatsappUrl = "";
 
   @override
   void onReady() {
@@ -99,8 +101,9 @@ class ProfileScreenController extends GetxController {
   onNavigateUserList(int i, UserData? user) {
     Get.to(
             () => FollowersFollowingScreen(
-                  followFollowingType:
-                      i == 0 ? FollowFollowingType.followers : FollowFollowingType.following,
+                  followFollowingType: i == 0
+                      ? FollowFollowingType.followers
+                      : FollowFollowingType.following,
                   userId: user?.id,
                 ),
             preventDuplicates: true)
@@ -112,13 +115,15 @@ class ProfileScreenController extends GetxController {
   }
 
   void onUpdateReelsList(ReelUpdateType type, ReelData data) {
-    ReelUpdater.updateReelsList(reelsList: userData?.yourReels ?? [], type: type, data: data);
+    ReelUpdater.updateReelsList(
+        reelsList: userData?.yourReels ?? [], type: type, data: data);
     update();
   }
 
   onActionButtonTap(int index) {
     if (index == 1) {
-      if (((userData?.totalReelsCount ?? 0) >= (settingData?.reelUploadLimit ?? 0)) &&
+      if (((userData?.totalReelsCount ?? 0) >=
+              (settingData?.reelUploadLimit ?? 0)) &&
           !isSubscribe.value) {
         Get.dialog(SubscriptionDialog(
           onUpdate: (isSubscribe) {
@@ -134,7 +139,8 @@ class ProfileScreenController extends GetxController {
         );
       }
     } else if (index == 2) {
-      if (((userData?.totalPropertiesCount ?? 0) > (settingData?.propertyUploadLimit ?? 0)) &&
+      if (((userData?.totalPropertiesCount ?? 0) >
+              (settingData?.propertyUploadLimit ?? 0)) &&
           !isSubscribe.value) {
         Get.dialog(SubscriptionDialog(
           onUpdate: (isSubscribe) {
@@ -146,6 +152,21 @@ class ProfileScreenController extends GetxController {
         Get.to(() => const AddEditPropertyScreen(screenType: 0))?.then((value) {
           fetchProfile();
         });
+      }
+    } else if (index == 3) {
+      // هنا كود الواتساب
+      _openWhatsApp();
+    }
+  }
+
+// أضف الفانكشن دي
+  void _openWhatsApp() async {
+    if (whatsappUrl.isNotEmpty) {
+      final Uri url = Uri.parse(whatsappUrl);
+      if (await canLaunchUrl(url)) {
+        await launchUrl(url, mode: LaunchMode.externalApplication);
+      } else {
+        Get.snackbar("خطأ", "لا يمكن فتح الواتساب");
       }
     }
   }

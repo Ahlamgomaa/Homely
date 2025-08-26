@@ -36,12 +36,18 @@ class UtilitiesGrids extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<UtilitiesCustom> utilities = [
-      UtilitiesCustom(AssetRes.hospitalIcon, S.current.hospital, controller.propertyData?.farFromHospital ?? ''),
-      UtilitiesCustom(AssetRes.schoolIcon, S.current.school, controller.propertyData?.farFromSchool ?? ''),
-      UtilitiesCustom(AssetRes.gymIcon, S.current.gym, controller.propertyData?.farFromGym ?? ''),
-      UtilitiesCustom(AssetRes.marketIcon, S.current.market, controller.propertyData?.farFromMarket ?? ''),
-      UtilitiesCustom(AssetRes.gasolineIcon, S.current.gasoline, controller.propertyData?.farFromGasoline ?? ''),
-      UtilitiesCustom(AssetRes.airportIcon, S.current.airport, controller.propertyData?.farFromAirport ?? ''),
+      UtilitiesCustom(AssetRes.hospitalIcon, S.current.hospital,
+          controller.propertyData?.farFromHospital ?? ''),
+      UtilitiesCustom(AssetRes.schoolIcon, S.current.school,
+          controller.propertyData?.farFromSchool ?? ''),
+      UtilitiesCustom(AssetRes.gymIcon, S.current.gym,
+          controller.propertyData?.farFromGym ?? ''),
+      UtilitiesCustom(AssetRes.marketIcon, S.current.market,
+          controller.propertyData?.farFromMarket ?? ''),
+      UtilitiesCustom(AssetRes.gasolineIcon, S.current.superMarket,
+          controller.propertyData?.farFromGasoline ?? ''),
+      UtilitiesCustom(AssetRes.airportIcon, S.current.airport,
+          controller.propertyData?.farFromAirport ?? ''),
     ];
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -50,7 +56,10 @@ class UtilitiesGrids extends StatelessWidget {
         primary: false,
         shrinkWrap: true,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, childAspectRatio: 3.5, crossAxisSpacing: 1, mainAxisSpacing: 10),
+            crossAxisCount: 2,
+            childAspectRatio: 3.5,
+            crossAxisSpacing: 1,
+            mainAxisSpacing: 10),
         itemCount: utilities.length,
         itemBuilder: (BuildContext context, int index) {
           UtilitiesCustom data = utilities[index];
@@ -97,7 +106,8 @@ class UtilitiesGrids extends StatelessWidget {
                         ),
                         Text(
                           data.duration,
-                          style: MyTextStyle.productLight(size: 13, color: ColorRes.doveGrey),
+                          style: MyTextStyle.productLight(
+                              size: 13, color: ColorRes.doveGrey),
                         ),
                       ],
                     ),

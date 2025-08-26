@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:homely/common/common_fun.dart';
 import 'package:homely/common/widget/user_image_custom.dart';
@@ -39,12 +40,14 @@ class ContactInformation extends StatelessWidget {
           isVisible: PrefService.id != data?.userId,
         ),
         ContactListTiles(
-          isVisible: CommonFun.getMedia(m: data?.media ?? [], mediaId: 7).isNotEmpty,
+          isVisible:
+              CommonFun.getMedia(m: data?.media ?? [], mediaId: 7).isNotEmpty,
           title: S.of(context).watchVideo,
           onTap: controller.onNavigateVideoScreen,
         ),
         ContactListTiles(
-          isVisible: CommonFun.getMedia(m: data?.media ?? [], mediaId: 4).isNotEmpty,
+          isVisible:
+              CommonFun.getMedia(m: data?.media ?? [], mediaId: 4).isNotEmpty,
           title: S.of(context).floorPlans,
           onTap: controller.onNavigateFloorPlan,
         ),
@@ -63,7 +66,11 @@ class PropertyProfileCard extends StatelessWidget {
   final VoidCallback onTap;
   final VoidCallback onMessageClick;
 
-  const PropertyProfileCard({super.key, this.userData, required this.onTap, required this.onMessageClick});
+  const PropertyProfileCard(
+      {super.key,
+      this.userData,
+      required this.onTap,
+      required this.onMessageClick});
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +96,8 @@ class PropertyProfileCard extends StatelessWidget {
                       Flexible(
                         child: Text(
                           userData?.fullname ?? '',
-                          style: MyTextStyle.productMedium(size: 16, color: ColorRes.daveGrey),
+                          style: MyTextStyle.productMedium(
+                              size: 16, color: ColorRes.daveGrey),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -130,7 +138,10 @@ class PropertyProfileCard extends StatelessWidget {
               width: 7,
             ),
             Visibility(
-              visible: (userData?.mobileNo != null && userData!.mobileNo!.isNotEmpty && PrefService.id != userData?.id),
+              visible: true,
+              // visible: (userData?.mobileNo != null &&
+              //     userData!.mobileNo!.isNotEmpty &&
+              //     PrefService.id != userData?.id),
               child: InkWell(
                 onTap: () {
                   launchUrl(Uri.parse('tel:${userData?.mobileNo}'));
@@ -150,6 +161,37 @@ class PropertyProfileCard extends StatelessWidget {
                 ),
               ),
             ),
+            //   ،  زر الواتساب
+            const SizedBox(width: 7),
+            Visibility(
+              visible: true,
+              // visible: (userData?.mobileNo != null &&
+              //     userData!.mobileNo!.isNotEmpty &&
+              //     PrefService.id != userData?.id),
+              child: InkWell(
+                onTap: () {
+                  print("WhatsApp button clicked!");
+                  final whatsappUrl =
+                      "https://wa.me/${userData?.mobileNo}?text=مرحباً، أطلب اقرار";
+                  launchUrl(Uri.parse(whatsappUrl),
+                      mode: LaunchMode.externalApplication);
+                },
+                child: Container(
+                  width: 39,
+                  height: 39,
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF25D366), // لون الواتساب الأخضر
+                    shape: BoxShape.circle,
+                  ),
+                  alignment: Alignment.center,
+                  child: const Icon(
+                    FontAwesomeIcons.whatsapp,
+                    color: Colors.white,
+                    size: 20,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -162,7 +204,11 @@ class ContactListTiles extends StatelessWidget {
   final VoidCallback onTap;
   final bool isVisible;
 
-  const ContactListTiles({super.key, required this.title, required this.onTap, this.isVisible = true});
+  const ContactListTiles(
+      {super.key,
+      required this.title,
+      required this.onTap,
+      this.isVisible = true});
 
   @override
   Widget build(BuildContext context) {
@@ -179,7 +225,8 @@ class ContactListTiles extends StatelessWidget {
             children: [
               Text(
                 title.capitalize ?? '',
-                style: MyTextStyle.productLight(size: 15, color: ColorRes.daveGrey),
+                style: MyTextStyle.productLight(
+                    size: 15, color: ColorRes.daveGrey),
               ),
               const Icon(
                 CupertinoIcons.right_chevron,

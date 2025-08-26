@@ -8,22 +8,32 @@ import 'package:homely/screen/search_place_screen/search_place_screen.dart';
 import 'package:homely/service/api_service.dart';
 import 'package:homely/service/pref_service.dart';
 import 'package:homely/utils/url_res.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../../model/setting.dart';
+import '../../service/subscription_manager.dart';
+import '../add_edit_property_screen/add_edit_property_screen.dart';
+import '../camera_screen/camera_screen.dart';
+import '../profile_screen/widget/subscription_dialog.dart';
 
 class HomeScreenController extends GetxController {
   PageController pageController = PageController(viewportFraction: 0.90);
   ScrollController scrollController = ScrollController();
 
   FetchHomePageData? homeData;
+  UserData? userData;
   bool isLoading = false;
   PrefService prefService = PrefService();
   UserData? savedUser;
+  SettingData? settingData;
 
   String selectedCity = '- - - - - -';
   double lat = 0;
   double lng = 0;
 
   bool isResetBtnVisible = false;
-  String? propertyMode = 'all'; // القيمة الافتراضية للبيع
+  String? propertyMode = 'all'; // اdefault value
+  String whatsappUrl = "";
 
   @override
   void onReady() {
@@ -52,6 +62,25 @@ class HomeScreenController extends GetxController {
       selectedCity = cityFromPref;
     }
     fetchHomePageData();
+  }
+
+  fetchProfile() {
+    ApiService().call(
+      url: UrlRes.fetchProfileDetail,
+      param: {
+        uUserId: PrefService.id.toString(),
+        uMyUserId: PrefService.id.toString(),
+      },
+      completion: (response) async {
+        FetchUser registration = FetchUser.fromJson(response);
+        if (registration.status == true) {
+          await prefService.saveUser(FetchUser.fromJson(response).data);
+          userData = registration.data;
+          isLoading = false;
+          update();
+        }
+      },
+    );
   }
 
   void fetchHomePageData() {
@@ -154,6 +183,57 @@ class HomeScreenController extends GetxController {
     lng = 0;
     update();
     fetchHomePageData();
+  }
+
+  onActionButtonTap(int index) {
+    if (index == 1) {
+      if (((userData?.totalReelsCount ?? 0) >=
+              (settingData?.reelUploadLimit ?? 0)) &&
+          !isSubscribe.value) {
+        Get.dialog(SubscriptionDialog(
+          onUpdate: (isSubscribe) {
+            userData?.verificationStatus = isSubscribe ? 3 : 0;
+            update();
+          },
+        ));
+      } else {
+        Get.to(() => const CameraScreen())?.then(
+          (value) {
+            fetchProfile();
+          },
+        );
+      }
+    } else if (index == 2) {
+      if (((userData?.totalPropertiesCount ?? 0) >
+              (settingData?.propertyUploadLimit ?? 0)) &&
+          !isSubscribe.value) {
+        Get.dialog(SubscriptionDialog(
+          onUpdate: (isSubscribe) {
+            userData?.verificationStatus = isSubscribe ? 3 : 0;
+            update();
+          },
+        ));
+      } else {
+        Get.to(() => const AddEditPropertyScreen(screenType: 0))?.then((value) {
+          fetchProfile();
+        });
+      }
+    } else if (index == 3) {
+      // هنا كود الواتساب
+      _openWhatsApp();
+    }
+  }
+
+// أضف الفانكشن دي
+  void _openWhatsApp() async {
+    if (whatsappUrl.isNotEmpty) {
+      final Uri url = Uri.parse(whatsappUrl);
+      if (await canLaunchUrl(url)) {
+        await launchUrl(url, mode: LaunchMode.externalApplication);
+      } else {
+        Get.snackbar("خطأ", "لا يمكن فتح الواتساب");
+      }
+    }
   }
 
   void onRefresh() {

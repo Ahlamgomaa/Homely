@@ -70,7 +70,7 @@ dependencies:
   photo_view: ^0.15.0
   video_player: ^2.9.2
   fvp: ^0.29.0
-  url_launcher: ^6.3.1
+  url_launcher: ^6.3.2
   flutter_branch_sdk: ^8.3.2
   share_plus: ^10.1.4
   webview_flutter: ^4.9.0
@@ -86,6 +86,7 @@ dependencies:
   flutter_speed_dial: ^7.0.0
   flutter_launcher_icons: ^0.14.4
   rename: ^3.1.0
+  font_awesome_flutter: ^10.10.0
 
 dev_dependencies:
   flutter_test:

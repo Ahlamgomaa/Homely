@@ -23,425 +23,612 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
 
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "about": MessageLookupByLibrary.simpleMessage("عن"),
-        "aboutProperty": MessageLookupByLibrary.simpleMessage("حول الملكية"),
+        "about": MessageLookupByLibrary.simpleMessage("عن التطبيق"),
+        "aboutProperty": MessageLookupByLibrary.simpleMessage("تفاصيل العقار"),
         "aboutYourself": MessageLookupByLibrary.simpleMessage("عن نفسك"),
-        "accept": MessageLookupByLibrary.simpleMessage("يقبل"),
+        "accept": MessageLookupByLibrary.simpleMessage("قبول"),
         "acceptOrDeclineTheRequestToLetTheBuyerKnow":
-            MessageLookupByLibrary.simpleMessage("قم بقبول أو رفض الطلب لإعلام المشتري بالتوفر."),
-        "addProperty": MessageLookupByLibrary.simpleMessage("أضف خاصية"),
-        "addReel": MessageLookupByLibrary.simpleMessage("أضف بكرة"),
-        "addUtilities": MessageLookupByLibrary.simpleMessage("إضافة المرافق"),
-        "addressOptional": MessageLookupByLibrary.simpleMessage("العنوان (اختياري)"),
-        "adsWillBeShownOnYourProfile":
-            MessageLookupByLibrary.simpleMessage("سيتم عرض الإعلانات في ملفك الشخصي"),
-        "after3DayTrialThisSubscriptionAutomaticallyRenewsAsPer": MessageLookupByLibrary.simpleMessage(
-            "بعد تجربة مدتها 3 أيام، يتم تجديد هذا الاشتراك تلقائيًا وفقًا للخطة. سيتم تجديد الاشتراك تلقائيًا ما لم يتم إلغاؤه خلال 24 ساعة قبل نهاية الفترة الحالية. يمكنك إدارة وإلغاء اشتراكك في أي وقت من إعدادات Apple الخاصة بك."),
-        "agency": MessageLookupByLibrary.simpleMessage("وكالة"),
+            MessageLookupByLibrary.simpleMessage(
+          "اقبل أو ارفض الطلب عشان يعرف المشتري عن التوفير",
+        ),
+        "addProperty": MessageLookupByLibrary.simpleMessage("اضف عقار"),
+        "addReel": MessageLookupByLibrary.simpleMessage("أضف ريل "),
+        "addUtilities": MessageLookupByLibrary.simpleMessage("أضف خدمات"),
+        "addressOptional": MessageLookupByLibrary.simpleMessage(
+          "العنوان (اختياري)",
+        ),
+        "adsWillBeShownOnYourProfile": MessageLookupByLibrary.simpleMessage(
+          "الإعلانات بتظهر في ملفك",
+        ),
+        "after3DayTrialThisSubscriptionAutomaticallyRenewsAsPer":
+            MessageLookupByLibrary.simpleMessage(
+          "بعد 3 أيام تجربة، الاشتراك يتجدد تلقائي حسب الخطة. بيتجدد إلا إذا لغيت قبل 24 ساعة من نهاية الفترة. تقدر تدير وتلغي الاشتراك من إعدادات أبل.",
+        ),
+        "agency": MessageLookupByLibrary.simpleMessage("مكتب"),
         "airport": MessageLookupByLibrary.simpleMessage("مطار"),
-        "all": MessageLookupByLibrary.simpleMessage("الجميع"),
-        "allow": MessageLookupByLibrary.simpleMessage("يسمح"),
-        "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage("هل لديك حساب؟"),
+        "all": MessageLookupByLibrary.simpleMessage("الكل"),
+        "allow": MessageLookupByLibrary.simpleMessage("اسمح"),
+        "alreadyHaveAnAccount":
+            MessageLookupByLibrary.simpleMessage("عندك حساب؟"),
         "and": MessageLookupByLibrary.simpleMessage("و"),
         "apartment": MessageLookupByLibrary.simpleMessage("شقة"),
-        "areYouSure": MessageLookupByLibrary.simpleMessage("هل أنت متأكد؟"),
+        "appName": MessageLookupByLibrary.simpleMessage("عربة العقارية "),
+        "areYouSure": MessageLookupByLibrary.simpleMessage("متأكد؟"),
         "areYouSureYouWantToDeleteTheReelPermanently":
-            MessageLookupByLibrary.simpleMessage("هل أنت متأكد أنك تريد حذف البكرة بشكل دائم"),
-        "areYouSureYouWantToDeleteYourAccountThis": MessageLookupByLibrary.simpleMessage(
-            "هل انت متأكد انك تريد حذف حسابك؟ هذا الإجراء لا رجعة فيه. سيتم حذف جميع بياناتك نهائيًا"),
+            MessageLookupByLibrary.simpleMessage(
+                "متأكد تبغى تحذف الريل نهائياً؟"),
+        "areYouSureYouWantToDeleteYourAccountThis":
+            MessageLookupByLibrary.simpleMessage(
+          "متأكد تبغى تحذف حسابك؟ ترى ما تقدر ترجعه. كل بياناتك بتنمسح نهائي.ً",
+        ),
         "areYouSureYouWantToDeleteYourProperty":
-            MessageLookupByLibrary.simpleMessage("هل أنت متأكد؟ تريد حذف الممتلكات الخاصة بك."),
-        "areYouSureYouWantToLogOut":
-            MessageLookupByLibrary.simpleMessage("هل أنت متأكد أنك تريد تسجيل الخروج؟"),
-        "area": MessageLookupByLibrary.simpleMessage("منطقة"),
-        "areaRange": MessageLookupByLibrary.simpleMessage("نطاق المنطقة"),
-        "attachYourProperty": MessageLookupByLibrary.simpleMessage("إرفاق الممتلكات الخاصة بك"),
-        "attributes": MessageLookupByLibrary.simpleMessage("صفات"),
+            MessageLookupByLibrary.simpleMessage("متأكد تبغى تحذف العقار؟"),
+        "areYouSureYouWantToLogOut": MessageLookupByLibrary.simpleMessage(
+          "متأكد تبغى تسجل خروج؟",
+        ),
+        "area": MessageLookupByLibrary.simpleMessage("المساحة"),
+        "areaRange": MessageLookupByLibrary.simpleMessage(" المساحة"),
+        "attachYourProperty":
+            MessageLookupByLibrary.simpleMessage("أرفق  عقارك"),
+        "attributes": MessageLookupByLibrary.simpleMessage("المواصفات"),
         "available": MessageLookupByLibrary.simpleMessage("متاح"),
         "bathroom": MessageLookupByLibrary.simpleMessage("حمام"),
-        "bathrooms": MessageLookupByLibrary.simpleMessage("الحمامات"),
-        "becomeAPro": MessageLookupByLibrary.simpleMessage("كن محترفًا"),
+        "bathrooms": MessageLookupByLibrary.simpleMessage("حمامات"),
+        "becomeAPro": MessageLookupByLibrary.simpleMessage("صِر برو"),
         "bedrooms": MessageLookupByLibrary.simpleMessage("غرف نوم"),
-        "bedroomsBathrooms": MessageLookupByLibrary.simpleMessage("غرف النوم/الحمامات"),
-        "block": MessageLookupByLibrary.simpleMessage("حاجز"),
-        "blockUsers": MessageLookupByLibrary.simpleMessage("مستخدمين محجوبين"),
-        "broker": MessageLookupByLibrary.simpleMessage("وسيط"),
+        "bedroomsBathrooms":
+            MessageLookupByLibrary.simpleMessage("غرف نوم/حمامات"),
+        "block": MessageLookupByLibrary.simpleMessage("حظر"),
+        "blockUsers":
+            MessageLookupByLibrary.simpleMessage("المستخدمين المحظورين"),
+        "broker": MessageLookupByLibrary.simpleMessage("وسيط عقاري"),
         "buildYear": MessageLookupByLibrary.simpleMessage("سنة البناء"),
         "builtYear": MessageLookupByLibrary.simpleMessage("سنة البناء"),
-        "buyer": MessageLookupByLibrary.simpleMessage("مشتر"),
+        "buyer": MessageLookupByLibrary.simpleMessage("مشتري"),
         "byProceedingForwardYouAgreeToThe":
-            MessageLookupByLibrary.simpleMessage("من خلال المضي قدمًا، فإنك توافق على"),
-        "cancelAnytime": MessageLookupByLibrary.simpleMessage("إلغاء في أي وقت"),
-        "captureImage": MessageLookupByLibrary.simpleMessage("التقاط الصورة"),
-        "captureVideo": MessageLookupByLibrary.simpleMessage("التقاط الفديو"),
-        "carParking": MessageLookupByLibrary.simpleMessage("موقف سيارة"),
+            MessageLookupByLibrary.simpleMessage(
+          "بتكمل معنا معناها إنك موافق على",
+        ),
+        "cancelAnytime":
+            MessageLookupByLibrary.simpleMessage("تقدر تلغي بأي وقت"),
+        "captureImage": MessageLookupByLibrary.simpleMessage("التقط صورة"),
+        "captureVideo": MessageLookupByLibrary.simpleMessage("التقط فيديو"),
+        "carParking": MessageLookupByLibrary.simpleMessage("موقف السيارة"),
         "changeLanguage": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
-        "changePassword": MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
-        "chat": MessageLookupByLibrary.simpleMessage("محادثة"),
-        "clickToFetchLocation": MessageLookupByLibrary.simpleMessage("انقر لجلب الموقع"),
-        "comments": MessageLookupByLibrary.simpleMessage("تعليقات"),
+        "changePassword":
+            MessageLookupByLibrary.simpleMessage("تغيير الرقم السري"),
+        "chat": MessageLookupByLibrary.simpleMessage("دردشة"),
+        "clickToFetchLocation": MessageLookupByLibrary.simpleMessage(
+          "اضغط لتحديد الموقع",
+        ),
+        "comments": MessageLookupByLibrary.simpleMessage("التعليقات"),
         "commercial": MessageLookupByLibrary.simpleMessage("تجاري"),
-        "confirmPassword": MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "confirmPassword": MessageLookupByLibrary.simpleMessage(
+          "تأكيد الرقم السري",
+        ),
         "confirmed": MessageLookupByLibrary.simpleMessage("مؤكد"),
-        "contact": MessageLookupByLibrary.simpleMessage("اتصال"),
-        "contactInformation": MessageLookupByLibrary.simpleMessage("معلومات الاتصال"),
-        "currentPassword": MessageLookupByLibrary.simpleMessage("كلمة السر الحالية"),
-        "decline": MessageLookupByLibrary.simpleMessage("انخفاض"),
-        "delete": MessageLookupByLibrary.simpleMessage("يمسح"),
-        "deleteAccount": MessageLookupByLibrary.simpleMessage("حذف الحساب"),
-        "deleteMessage": MessageLookupByLibrary.simpleMessage("حذف رسالة"),
-        "deleteProperty": MessageLookupByLibrary.simpleMessage("هل تريد حذف العقار؟"),
-        "deleteReel": MessageLookupByLibrary.simpleMessage("حذف بكرة"),
-        "description": MessageLookupByLibrary.simpleMessage("وصف"),
-        "details": MessageLookupByLibrary.simpleMessage("تفاصيل"),
-        "discard": MessageLookupByLibrary.simpleMessage("ينبذ"),
-        "discardReel": MessageLookupByLibrary.simpleMessage("تجاهل بكرة"),
-        "discoverBuyRentndreamHomeFromSmartPhone": MessageLookupByLibrary.simpleMessage(
-            "اكتشف - اشتري - استأجر\nمنزل الأحلام من الهواتف الذكية"),
-        "distanceInTime": MessageLookupByLibrary.simpleMessage("المسافة في الوقت المناسب"),
-        "done": MessageLookupByLibrary.simpleMessage("منتهي"),
-        "edit": MessageLookupByLibrary.simpleMessage("يحرر"),
-        "email": MessageLookupByLibrary.simpleMessage("بريد إلكتروني"),
-        "emailSendSuccessfullyPleaseCheckYourMail": MessageLookupByLibrary.simpleMessage(
-            "تم إرسال البريد الإلكتروني بنجاح!!! رجاء تفحص بريدك الإلكتروني."),
-        "ended": MessageLookupByLibrary.simpleMessage("انتهى"),
-        "enquireInfo": MessageLookupByLibrary.simpleMessage("الاستفسار عن المعلومات"),
+        "contact": MessageLookupByLibrary.simpleMessage("تواصل"),
+        "contactInformation": MessageLookupByLibrary.simpleMessage(
+          "معلومات التواصل",
+        ),
+        "currentPassword": MessageLookupByLibrary.simpleMessage(
+          "الرقم السري الحالي",
+        ),
+        "decline": MessageLookupByLibrary.simpleMessage("رفض"),
+        "delete": MessageLookupByLibrary.simpleMessage("حذف"),
+        "deleteAccount": MessageLookupByLibrary.simpleMessage("احذف الحساب"),
+        "deleteMessage": MessageLookupByLibrary.simpleMessage("حذف الرسالة"),
+        "deleteProperty": MessageLookupByLibrary.simpleMessage(" تحذف العقار؟"),
+        "deleteReel": MessageLookupByLibrary.simpleMessage("حذف الريل "),
+        "description": MessageLookupByLibrary.simpleMessage("الوصف"),
+        "details": MessageLookupByLibrary.simpleMessage("التفاصيل"),
+        "discard": MessageLookupByLibrary.simpleMessage("تجاهل"),
+        "discardReel": MessageLookupByLibrary.simpleMessage("احذف الريل"),
+        "discoverBuyRentndreamHomeFromSmartPhone":
+            MessageLookupByLibrary.simpleMessage(
+          "اكتشف - اشتر - استأجر\nبيت أحلامك من جوالك",
+        ),
+        "distanceInTime":
+            MessageLookupByLibrary.simpleMessage("المسافة بالوقت"),
+        "done": MessageLookupByLibrary.simpleMessage("تم"),
+        "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
+        "email": MessageLookupByLibrary.simpleMessage("الإيميل"),
+        "emailSendSuccessfullyPleaseCheckYourMail":
+            MessageLookupByLibrary.simpleMessage(
+          "تم إرسال الإيميل بنجاح!!! شيّك بريدك.",
+        ),
+        "ended": MessageLookupByLibrary.simpleMessage("منتهي"),
+        "enquireInfo": MessageLookupByLibrary.simpleMessage("استفسر"),
         "enterTheDescriptionMoreAboutReason":
-            MessageLookupByLibrary.simpleMessage("أدخل الوصف أكثر عن السبب"),
-        "enterYourAreaOrApartmentName":
-            MessageLookupByLibrary.simpleMessage("أدخل اسم منطقتك أو شقتك"),
-        "enterYourReasonWhyAreYouReport":
-            MessageLookupByLibrary.simpleMessage("أدخل السبب الخاص بك لماذا أنت التقرير"),
-        "facing": MessageLookupByLibrary.simpleMessage("مواجهة"),
+            MessageLookupByLibrary.simpleMessage(
+          "دخل وصف أكثر عن السبب",
+        ),
+        "enterYourAreaOrApartmentName": MessageLookupByLibrary.simpleMessage(
+          "دخل اسم الحي أو الشقة",
+        ),
+        "enterYourReasonWhyAreYouReport": MessageLookupByLibrary.simpleMessage(
+          "دخل سبب البلاغ",
+        ),
+        "facing": MessageLookupByLibrary.simpleMessage("واجهة العقار"),
         "faqs": MessageLookupByLibrary.simpleMessage("الأسئلة الشائعة"),
         "fax": MessageLookupByLibrary.simpleMessage("فاكس"),
-        "faxOptional": MessageLookupByLibrary.simpleMessage("الفاكس (اختياري)"),
-        "featured": MessageLookupByLibrary.simpleMessage("متميز"),
-        "firstImageWillFeaturedImage":
-            MessageLookupByLibrary.simpleMessage("(الصورة الأولى سوف تظهر الصورة)"),
+        "faxOptional": MessageLookupByLibrary.simpleMessage("فاكس (اختياري)"),
+        "featured": MessageLookupByLibrary.simpleMessage("مميز"),
+        "firstImageWillFeaturedImage": MessageLookupByLibrary.simpleMessage(
+          "(أول صورة بتكون الرئيسية)",
+        ),
         "firstPrice": MessageLookupByLibrary.simpleMessage("السعر الأول"),
-        "floorNumber": MessageLookupByLibrary.simpleMessage("رقم الدور"),
-        "floorPlanImages": MessageLookupByLibrary.simpleMessage("صور مخطط الطابق"),
-        "floorPlans": MessageLookupByLibrary.simpleMessage("خطط المبنى"),
-        "follow": MessageLookupByLibrary.simpleMessage("يتبع"),
-        "followers": MessageLookupByLibrary.simpleMessage("متابعون"),
-        "followersList": MessageLookupByLibrary.simpleMessage("قائمة المتابعين"),
-        "following": MessageLookupByLibrary.simpleMessage("التالي"),
-        "followingList": MessageLookupByLibrary.simpleMessage("القائمة التالية"),
+        "floorNumber": MessageLookupByLibrary.simpleMessage(" الدور"),
+        "floorPlanImages":
+            MessageLookupByLibrary.simpleMessage("صور مخطط الطوابق"),
+        "floorPlans": MessageLookupByLibrary.simpleMessage("مخطط الأدوار "),
+        "follow": MessageLookupByLibrary.simpleMessage("متابعة"),
+        "followers": MessageLookupByLibrary.simpleMessage("المتابعين"),
+        "followersList":
+            MessageLookupByLibrary.simpleMessage("قائمة المتابعين"),
+        "following": MessageLookupByLibrary.simpleMessage("تتابع"),
+        "followingList":
+            MessageLookupByLibrary.simpleMessage("قائمة اللي تتابعهم"),
         "forRent": MessageLookupByLibrary.simpleMessage("للإيجار"),
         "forSale": MessageLookupByLibrary.simpleMessage("للبيع"),
         "forYou": MessageLookupByLibrary.simpleMessage("لك"),
-        "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
-        "forgotPassword": MessageLookupByLibrary.simpleMessage("هل نسيت كلمة السر"),
-        "forgotYourPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة السر؟"),
-        "freePlan": MessageLookupByLibrary.simpleMessage("خطة مجانية"),
-        "fullname": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
-        "furnished": MessageLookupByLibrary.simpleMessage("مفروشة، مد، زود"),
+        "forgetPassword":
+            MessageLookupByLibrary.simpleMessage("نسيت الرقم السري؟"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("نسيت الرقم السري"),
+        "forgotYourPassword": MessageLookupByLibrary.simpleMessage(
+          "نسيت رقمك السري؟",
+        ),
+        "freePlan": MessageLookupByLibrary.simpleMessage("الخطة المجانية"),
+        "fullname": MessageLookupByLibrary.simpleMessage("الاسم كامل"),
+        "furnished": MessageLookupByLibrary.simpleMessage("مؤثث"),
         "furniture": MessageLookupByLibrary.simpleMessage("أثاث"),
-        "gasoline": MessageLookupByLibrary.simpleMessage("الغازولين"),
-        "getVerifiedBadge": MessageLookupByLibrary.simpleMessage("احصل على شارة التحقق"),
-        "gym": MessageLookupByLibrary.simpleMessage("نادي رياضي"),
-        "home": MessageLookupByLibrary.simpleMessage("بيت"),
+        "getVerifiedBadge":
+            MessageLookupByLibrary.simpleMessage("خذ شارة التحقق"),
+        "gym": MessageLookupByLibrary.simpleMessage("نادي رياضية"),
+        "home": MessageLookupByLibrary.simpleMessage("الصفحة الرئيسية"),
         "hospital": MessageLookupByLibrary.simpleMessage("مستشفى"),
-        "iAmABroker": MessageLookupByLibrary.simpleMessage("أنا وسيط"),
-        "ifAppearsThatCameraPermissionHasNotBeenGrantedTo": MessageLookupByLibrary.simpleMessage(
-            "إذا ظهر أنه لم يتم منح إذن الكاميرا. بالنسبة إلى التطبيق، ستحتاج إلى السماح بالوصول إلى الكاميرا من الإعدادات."),
+        "iAmABroker": MessageLookupByLibrary.simpleMessage("أنا وسيط "),
+        "ifAppearsThatCameraPermissionHasNotBeenGrantedTo":
+            MessageLookupByLibrary.simpleMessage(
+          "يبدو ما عطيت إذن للكاميرا. لازم تفعله من الإعدادات.",
+        ),
         "ifYouGoBackNowYouWillLoseAnyChanges":
-            MessageLookupByLibrary.simpleMessage("إذا عدت الآن، فسوف تفقد أي تغييرات أجريتها."),
-        "ifYouUnblockHeMayBeAbleToSeeYour": MessageLookupByLibrary.simpleMessage(
-            "إذا قمت بإلغاء الحظر. قد يكون قادرا على رؤية الممتلكات الخاصة بك"),
-        "images": MessageLookupByLibrary.simpleMessage("الصور"),
-        "itSeemsYouHaveSelectedPastTimePleaseSelectFuture": MessageLookupByLibrary.simpleMessage(
-            "يبدو أنك حددت الوقت الماضي، يرجى تحديد الوقت المستقبلي"),
-        "kms": MessageLookupByLibrary.simpleMessage("كيلومترات"),
-        "language": MessageLookupByLibrary.simpleMessage("لغة"),
-        "latest": MessageLookupByLibrary.simpleMessage("أحدث"),
+            MessageLookupByLibrary.simpleMessage(
+          "لو رجعت الحين بتنمسح التعديلات اللي سويتها.",
+        ),
+        "ifYouUnblockHeMayBeAbleToSeeYour":
+            MessageLookupByLibrary.simpleMessage(
+          "لو ألغيت الحظر،بيقدر يشوف عقارك",
+        ),
+        "images": MessageLookupByLibrary.simpleMessage("صور"),
+        "itSeemsYouHaveSelectedPastTimePleaseSelectFuture":
+            MessageLookupByLibrary.simpleMessage(
+          "يبدو إنك اخترت وقت فات، اختر وقت قدام",
+        ),
+        "kms": MessageLookupByLibrary.simpleMessage("كم"),
+        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "latest": MessageLookupByLibrary.simpleMessage("الأحدث"),
         "less": MessageLookupByLibrary.simpleMessage("أقل"),
-        "listings": MessageLookupByLibrary.simpleMessage("القوائم"),
-        "location": MessageLookupByLibrary.simpleMessage("موقع"),
-        "locationFetched": MessageLookupByLibrary.simpleMessage("تم جلب الموقع"),
-        "locationNotFound": MessageLookupByLibrary.simpleMessage("لم يتم العثور على الموقع !!!"),
-        "locationServicesAreDisabled":
-            MessageLookupByLibrary.simpleMessage("تم تعطيل خدمات الموقع."),
-        "logIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "listings": MessageLookupByLibrary.simpleMessage("الإعلانات"),
+        "location": MessageLookupByLibrary.simpleMessage("الموقع"),
+        "locationFetched":
+            MessageLookupByLibrary.simpleMessage("تم جلب الموقع"),
+        "locationNotFound": MessageLookupByLibrary.simpleMessage(
+          "الموقع مو موجود!!!",
+        ),
+        "locationServicesAreDisabled": MessageLookupByLibrary.simpleMessage(
+          "خدمات الموقع مقفلة",
+        ),
+        "logIn": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
         "logOut": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
-        "maintenanceMo": MessageLookupByLibrary.simpleMessage("صيانة / مو."),
-        "mapScreen": MessageLookupByLibrary.simpleMessage("اختر الموقع"),
-        "markCompleted": MessageLookupByLibrary.simpleMessage("علامة مكتملة"),
+        "maintenanceMo":
+            MessageLookupByLibrary.simpleMessage("الصيانة / بالشهر"),
+        "mapScreen": MessageLookupByLibrary.simpleMessage("اختر المكان"),
+        "markCompleted": MessageLookupByLibrary.simpleMessage("تم الإنجاز"),
         "market": MessageLookupByLibrary.simpleMessage("سوق"),
-        "media": MessageLookupByLibrary.simpleMessage("وسائط"),
+        "media": MessageLookupByLibrary.simpleMessage("الوسائط"),
         "message": MessageLookupByLibrary.simpleMessage("رسالة"),
-        "messageDelete": MessageLookupByLibrary.simpleMessage("حذف الرسالة"),
-        "messages": MessageLookupByLibrary.simpleMessage("رسائل"),
-        "mobile": MessageLookupByLibrary.simpleMessage("متحرك"),
-        "mobileOptional": MessageLookupByLibrary.simpleMessage("الجوال (اختياري)"),
+        "messageDelete": MessageLookupByLibrary.simpleMessage("تم حذف الرسالة"),
+        "messages": MessageLookupByLibrary.simpleMessage("الرسائل"),
+        "mobile": MessageLookupByLibrary.simpleMessage("جوال"),
+        "mobileOptional":
+            MessageLookupByLibrary.simpleMessage("الجوال (اختياري)"),
         "month": MessageLookupByLibrary.simpleMessage("شهر"),
-        "more": MessageLookupByLibrary.simpleMessage("أكثر..."),
-        "myProperties": MessageLookupByLibrary.simpleMessage("خصائصي"),
-        "navigate": MessageLookupByLibrary.simpleMessage("التنقل"),
-        "nearby": MessageLookupByLibrary.simpleMessage("مجاور"),
-        "newPassword": MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
+        "more": MessageLookupByLibrary.simpleMessage("المزيد..."),
+        "myProperties": MessageLookupByLibrary.simpleMessage("عقاراتي"),
+        "navigate": MessageLookupByLibrary.simpleMessage("اتجه"),
+        "nearby": MessageLookupByLibrary.simpleMessage("قريب منك"),
+        "newPassword":
+            MessageLookupByLibrary.simpleMessage("الرقم السر الجديد"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "no": MessageLookupByLibrary.simpleMessage("لا"),
-        "no1AppToFindAndSearchMostnperfectSuitableHome": MessageLookupByLibrary.simpleMessage(
-            "التطبيق رقم 1 للعثور على المنزل المثالي والملائم لعائلتك والبحث فيه"),
-        "noComments": MessageLookupByLibrary.simpleMessage("بدون تعليقات"),
-        "noDataFound": MessageLookupByLibrary.simpleMessage("لاتوجد بيانات"),
-        "noImage": MessageLookupByLibrary.simpleMessage("لا توجد صورة"),
-        "noPropertyFound": MessageLookupByLibrary.simpleMessage("لم يتم العثور على الممتلكات"),
-        "noReelsFound": MessageLookupByLibrary.simpleMessage("لم يتم العثور على بكرات"),
-        "noReelsUploaded": MessageLookupByLibrary.simpleMessage("لم يتم تحميل أي بكرات"),
-        "noSavedProperty": MessageLookupByLibrary.simpleMessage("لا توجد خاصية محفوظة"),
+        "no1AppToFindAndSearchMostnperfectSuitableHome":
+            MessageLookupByLibrary.simpleMessage(
+          "التطبيق رقم 1 للبحث عن\nالبيت الأنسب لعائلتك",
+        ),
+        "noComments": MessageLookupByLibrary.simpleMessage("ما فيه تعليقات"),
+        "noDataFound": MessageLookupByLibrary.simpleMessage("ما فيه بيانات"),
+        "noImage": MessageLookupByLibrary.simpleMessage("ما فيه صورة"),
+        "noPropertyFound":
+            MessageLookupByLibrary.simpleMessage("ما فيه عقارات"),
+        "noReelsFound": MessageLookupByLibrary.simpleMessage("ما فيه ريلز "),
+        "noReelsUploaded":
+            MessageLookupByLibrary.simpleMessage("ما رفعت أي ريل "),
+        "noSavedProperty": MessageLookupByLibrary.simpleMessage(
+          "ما فيه عقارات محفوظة",
+        ),
         "noUserFoundForThatEmail": MessageLookupByLibrary.simpleMessage(
-            "لم يتم العثور على مستخدم لهذا البريد الإلكتروني."),
-        "notFurnished": MessageLookupByLibrary.simpleMessage("غير مفروش"),
-        "notification": MessageLookupByLibrary.simpleMessage("إشعار"),
+          "ما فيه مستخدم بهالإيميل",
+        ),
+        "notFurnished": MessageLookupByLibrary.simpleMessage("غير مؤثث"),
+        "notification": MessageLookupByLibrary.simpleMessage("تنبيهات"),
         "office": MessageLookupByLibrary.simpleMessage("مكتب"),
-        "openSettings": MessageLookupByLibrary.simpleMessage("أفتح الإعدادات"),
-        "optional": MessageLookupByLibrary.simpleMessage("(خياري)"),
+        "openSettings": MessageLookupByLibrary.simpleMessage("افتح الإعدادات"),
+        "optional": MessageLookupByLibrary.simpleMessage("(اختياري)"),
         "options": MessageLookupByLibrary.simpleMessage("خيارات"),
         "orders": MessageLookupByLibrary.simpleMessage("طلبات"),
-        "other": MessageLookupByLibrary.simpleMessage("آخر"),
+        "other": MessageLookupByLibrary.simpleMessage("غيره"),
         "otherImages": MessageLookupByLibrary.simpleMessage("صور أخرى"),
-        "overview": MessageLookupByLibrary.simpleMessage("ملخص"),
-        "ownerAgent": MessageLookupByLibrary.simpleMessage("المالك/الوكيل"),
+        "overview": MessageLookupByLibrary.simpleMessage("نظرة عامة"),
+        "ownerAgent": MessageLookupByLibrary.simpleMessage("المالك/الوسيط"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
-        "passwordNotMatch": MessageLookupByLibrary.simpleMessage("كلمة السر ليست جيدة"),
-        "payments": MessageLookupByLibrary.simpleMessage("المدفوعات"),
-        "phoneOfficeOptional": MessageLookupByLibrary.simpleMessage("مكتب الهاتف (اختياري)"),
+        "passwordNotMatch": MessageLookupByLibrary.simpleMessage(
+          "الرقمين مو متطابقين",
+        ),
+        "payments": MessageLookupByLibrary.simpleMessage("مدفوعات"),
+        "phoneOfficeOptional": MessageLookupByLibrary.simpleMessage(
+          "هاتف المكتب (اختياري)",
+        ),
         "photo": MessageLookupByLibrary.simpleMessage("صورة"),
-        "platform": MessageLookupByLibrary.simpleMessage("منصة"),
+        "platform": MessageLookupByLibrary.simpleMessage("المنصة"),
         "pleaseAddAtLeastOneOverviewImage":
-            MessageLookupByLibrary.simpleMessage("الرجاء إضافة صورة نظرة عامة واحدة على الأقل"),
+            MessageLookupByLibrary.simpleMessage(
+          "ضيف صورة وحدة على الأقل",
+        ),
         "pleaseAddAtLeastOnePropertyVideo":
-            MessageLookupByLibrary.simpleMessage("يرجى إضافة فيديو عقاري واحد على الأقل"),
-        "pleaseAttachYourProperty":
-            MessageLookupByLibrary.simpleMessage("يرجى إرفاق الممتلكات الخاصة بك"),
+            MessageLookupByLibrary.simpleMessage(
+          "ضيف فيديو واحد على الأقل",
+        ),
+        "pleaseAttachYourProperty": MessageLookupByLibrary.simpleMessage(
+          "أرفق عقارك",
+        ),
         "pleaseConfigureSubscriptionMoreInfoHere":
-            MessageLookupByLibrary.simpleMessage("يرجى تكوين الاشتراك. مزيد من المعلومات هنا:"),
-        "pleaseEnterAboutYourself": MessageLookupByLibrary.simpleMessage("الرجاء الدخول عن نفسك"),
-        "pleaseEnterBuiltYear": MessageLookupByLibrary.simpleMessage("الرجاء إدخال سنة البناء"),
-        "pleaseEnterConfirmPassword":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال تأكيد كلمة المرور"),
-        "pleaseEnterCurrentPassword":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال كلمة المرور الحالية"),
-        "pleaseEnterEmail": MessageLookupByLibrary.simpleMessage("الرجاء إدخال البريد الإلكتروني"),
-        "pleaseEnterFullname": MessageLookupByLibrary.simpleMessage("الرجاء إدخال الاسم الكامل"),
-        "pleaseEnterNewPassword":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال كلمة المرور الجديدة"),
-        "pleaseEnterPassword": MessageLookupByLibrary.simpleMessage("الرجاء إدخال كلمة المرور"),
-        "pleaseEnterPropertyTitle":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال عنوان العقار"),
-        "pleaseEnterRetypePassword":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال إعادة كتابة كلمة المرور"),
-        "pleaseEnterYourArea": MessageLookupByLibrary.simpleMessage("الرجاء إدخال منطقتك"),
-        "pleaseEnterYourDescription":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال الوصف الخاص بك"),
-        "pleaseEnterYourGasolineDistance":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال مسافة البنزين الخاصة بك"),
-        "pleaseEnterYourGymDistance":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال المسافة الصالة الرياضية الخاصة بك"),
-        "pleaseEnterYourHospitalDistance":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال المسافة المستشفى الخاص بك"),
+            MessageLookupByLibrary.simpleMessage(
+          "ضبط الاشتراك. للمزيد من المعلومات:",
+        ),
+        "pleaseEnterAboutYourself": MessageLookupByLibrary.simpleMessage(
+          "دخل عن نفسك",
+        ),
+        "pleaseEnterBuiltYear": MessageLookupByLibrary.simpleMessage(
+          "دخل سنة البناء",
+        ),
+        "pleaseEnterConfirmPassword": MessageLookupByLibrary.simpleMessage(
+          "دخل ناكيد الرقم السري",
+        ),
+        "pleaseEnterCurrentPassword": MessageLookupByLibrary.simpleMessage(
+          " دخل الرقم السري الحالي",
+        ),
+        "pleaseEnterEmail":
+            MessageLookupByLibrary.simpleMessage(" دخل الإيميل"),
+        "pleaseEnterFullname": MessageLookupByLibrary.simpleMessage(
+          "دخل الاسم كامل",
+        ),
+        "pleaseEnterNewPassword": MessageLookupByLibrary.simpleMessage(
+          "دخل الرقم السري الجديد",
+        ),
+        "pleaseEnterPassword": MessageLookupByLibrary.simpleMessage(
+          "دخل الرقم السري ",
+        ),
+        "pleaseEnterPropertyTitle": MessageLookupByLibrary.simpleMessage(
+          "دخل عنوان العقار",
+        ),
+        "pleaseEnterRetypePassword": MessageLookupByLibrary.simpleMessage(
+          "أعد كتابة الرقم السري",
+        ),
+        "pleaseEnterYourArea":
+            MessageLookupByLibrary.simpleMessage(" دخل مساحتك "),
+        "pleaseEnterYourDescription": MessageLookupByLibrary.simpleMessage(
+          "دخل وصفك",
+        ),
+        "pleaseEnterYourGasolineDistance": MessageLookupByLibrary.simpleMessage(
+          "دخل المسافة لمحطة البنزين",
+        ),
+        "pleaseEnterYourGymDistance": MessageLookupByLibrary.simpleMessage(
+          " دخل المسافة للنادي",
+        ),
+        "pleaseEnterYourHospitalDistance": MessageLookupByLibrary.simpleMessage(
+          "دخل المسافة للمستشفى",
+        ),
         "pleaseEnterYourMaintenanceInMonthAmount":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال مبلغ الصيانة الخاص بك في الشهر"),
-        "pleaseEnterYourMarketDistance":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال مسافة السوق الخاصة بك"),
-        "pleaseEnterYourPropertyAddress":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال عنوان الممتلكات الخاصة بك"),
-        "pleaseEnterYourSchoolDistance":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال المسافة مدرستك"),
-        "pleaseExplainAboutYourIssueBrieflyWeWillSureLook": MessageLookupByLibrary.simpleMessage(
-            "يرجى توضيح مشكلتك باختصار. سننظر بالتأكيد في هذا الأمر ونتخذ إجراءً."),
-        "pleaseFetchYourPropertyLocation":
-            MessageLookupByLibrary.simpleMessage("يرجى إحضار موقع الممتلكات الخاصة بك"),
+            MessageLookupByLibrary.simpleMessage("دخل قيمة الصيانة بالشهر"),
+        "pleaseEnterYourMarketDistance": MessageLookupByLibrary.simpleMessage(
+          "دخل المسافة للسوق",
+        ),
+        "pleaseEnterYourPropertyAddress": MessageLookupByLibrary.simpleMessage(
+          "دخل عنوان العقار",
+        ),
+        "pleaseEnterYourSchoolDistance": MessageLookupByLibrary.simpleMessage(
+          "دخل المسافة للمدرسة",
+        ),
+        "pleaseExplainAboutYourIssueBrieflyWeWillSureLook":
+            MessageLookupByLibrary.simpleMessage(
+          "اشرح مشكلتك بشكل مختصر، وحنراجعها ونتخذ إجراء.",
+        ),
+        "pleaseFetchYourPropertyLocation": MessageLookupByLibrary.simpleMessage(
+          "حدد موقع العقار",
+        ),
         "pleaseFillYourDetailsAndCompleteRegistrationToStartExploreRent":
             MessageLookupByLibrary.simpleMessage(
-                "يرجى ملء التفاصيل الخاصة بك وإكمال\nالتسجيل لبدء استكشاف العقارات أو استئجارها أو شرائها أو بيعها\nمن هاتفك الذكي."),
-        "pleaseProvideMeMoreDetailsOnThisPropertyIAm": MessageLookupByLibrary.simpleMessage(
-            "من فضلك زودني بمزيد من التفاصيل حول هذا العقار. أنا مهتم !"),
-        "pleaseSelectAnyOfTheAppropriateOptionFromBelowThat": MessageLookupByLibrary.simpleMessage(
-            "يرجى تحديد أي من الخيارات المناسبة أدناه التي تصف نفسك."),
-        "pleaseSelectAnyYourType":
-            MessageLookupByLibrary.simpleMessage("الرجاء تحديد أي نوع الخاص بك"),
-        "pleaseSelectBathrooms": MessageLookupByLibrary.simpleMessage("الرجاء اختيار الحمامات"),
-        "pleaseSelectBedrooms": MessageLookupByLibrary.simpleMessage("الرجاء اختيار غرف النوم"),
-        "pleaseSelectCarParking":
-            MessageLookupByLibrary.simpleMessage("يرجى اختيار مواقف السيارات"),
-        "pleaseSelectImage": MessageLookupByLibrary.simpleMessage("الرجاء اختيار الصورة"),
-        "pleaseSelectPropertyType": MessageLookupByLibrary.simpleMessage("الرجاء تحديد نوع العقار"),
-        "pleaseSelectYourBuildingFace":
-            MessageLookupByLibrary.simpleMessage("الرجاء تحديد وجه المبنى الخاص بك"),
+          "تكرم واملأ بياناتك وأكملعبي بياناتك وكمل التسجيل\nعشان تبدأ تستكشف، تستأجر، تشتري أو تبيع\nعقارات من جوالك.",
+        ),
+        "pleaseProvideMeMoreDetailsOnThisPropertyIAm":
+            MessageLookupByLibrary.simpleMessage(
+          "عطني تفاصيل أكثر عن العقار، أنا مهتم!",
+        ),
+        "pleaseSelectAnyOfTheAppropriateOptionFromBelowThat":
+            MessageLookupByLibrary.simpleMessage(
+          "اختر الخيار المناسب اللي يصفك من تحت ",
+        ),
+        "pleaseSelectAnyYourType": MessageLookupByLibrary.simpleMessage(
+          " اختر نوعك",
+        ),
+        "pleaseSelectBathrooms": MessageLookupByLibrary.simpleMessage(
+          "اختر عدد الحمامات",
+        ),
+        "pleaseSelectBedrooms": MessageLookupByLibrary.simpleMessage(
+          "اختر عدد الغرف",
+        ),
+        "pleaseSelectCarParking": MessageLookupByLibrary.simpleMessage(
+          "اختر موقف السيارة",
+        ),
+        "pleaseSelectImage": MessageLookupByLibrary.simpleMessage("اختر صورة"),
+        "pleaseSelectPropertyType": MessageLookupByLibrary.simpleMessage(
+          "اختر نوع العقار",
+        ),
+        "pleaseSelectYourBuildingFace": MessageLookupByLibrary.simpleMessage(
+          "اختر واجهه المبنى",
+        ),
         "pleaseSelectYourFloor":
-            MessageLookupByLibrary.simpleMessage("الرجاء تحديد الطابق الخاص بك"),
-        "pleaseSelectYourFloorNumber":
-            MessageLookupByLibrary.simpleMessage("الرجاء تحديد رقم الطابق الخاص بك"),
-        "pleaseSelectYourSupportSubject":
-            MessageLookupByLibrary.simpleMessage("الرجاء تحديد موضوع الدعم الخاص بك"),
-        "pleaseVerifiedYourEmail":
-            MessageLookupByLibrary.simpleMessage("يرجى التحقق من البريد الإلكتروني الخاص بك"),
-        "pool": MessageLookupByLibrary.simpleMessage("حمام سباحة"),
+            MessageLookupByLibrary.simpleMessage("اختر دورك"),
+        "pleaseSelectYourFloorNumber": MessageLookupByLibrary.simpleMessage(
+          "اختر رقم الدور",
+        ),
+        "pleaseSelectYourSupportSubject": MessageLookupByLibrary.simpleMessage(
+          "اختر موضوع الدعم",
+        ),
+        "pleaseVerifiedYourEmail": MessageLookupByLibrary.simpleMessage(
+          " تحقق من ايميلك ",
+        ),
+        "pool": MessageLookupByLibrary.simpleMessage("مسبح"),
         "pricing": MessageLookupByLibrary.simpleMessage("التسعير"),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
-        "pro": MessageLookupByLibrary.simpleMessage("طليعة"),
-        "proPlan": MessageLookupByLibrary.simpleMessage("الخطة الاحترافية"),
-        "profile": MessageLookupByLibrary.simpleMessage("حساب تعريفي"),
-        "profileDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الملف الشخصي"),
-        "properties": MessageLookupByLibrary.simpleMessage("ملكيات"),
-        "property": MessageLookupByLibrary.simpleMessage("ملكية"),
-        "propertyAddress": MessageLookupByLibrary.simpleMessage("عنوان العقار"),
-        "propertyCategory": MessageLookupByLibrary.simpleMessage("فئة العقار"),
-        "propertyId": MessageLookupByLibrary.simpleMessage("معرف العقار"),
-        "propertyIdNotFound":
-            MessageLookupByLibrary.simpleMessage("لم يتم العثور على معرف الخاصية"),
-        "propertyIsUnavailable": MessageLookupByLibrary.simpleMessage("الملكية غير متوفرة"),
+        "pro": MessageLookupByLibrary.simpleMessage("برو"),
+        "proPlan": MessageLookupByLibrary.simpleMessage("الخطة برو"),
+        "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+        "profileDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الملف "),
+        "properties": MessageLookupByLibrary.simpleMessage("عقارات"),
+        "property": MessageLookupByLibrary.simpleMessage("عقار"),
+        "propertyAddress": MessageLookupByLibrary.simpleMessage("نص الاعلان"),
+        "propertyCategory":
+            MessageLookupByLibrary.simpleMessage("تصنيف العقار"),
+        "propertyId": MessageLookupByLibrary.simpleMessage("رقم العقار"),
+        "propertyIdNotFound": MessageLookupByLibrary.simpleMessage(
+          "رقم العقار مو موجود ",
+        ),
+        "propertyIsUnavailable": MessageLookupByLibrary.simpleMessage(
+          "العقار مو متوفر",
+        ),
         "propertyLocation": MessageLookupByLibrary.simpleMessage("موقع العقار"),
-        "propertySelect": MessageLookupByLibrary.simpleMessage("اختر خاصية"),
+        "propertySelect": MessageLookupByLibrary.simpleMessage("اختر عقار"),
         "propertyTitle": MessageLookupByLibrary.simpleMessage("عنوان العقار"),
-        "propertyTourRequest": MessageLookupByLibrary.simpleMessage("طلب جولة الملكية"),
-        "propertyType": MessageLookupByLibrary.simpleMessage("نوع الملكية"),
-        "propertyVideo": MessageLookupByLibrary.simpleMessage("فيديو الملكية"),
-        "pushNotification": MessageLookupByLibrary.simpleMessage("دفع الإخطار"),
-        "radius": MessageLookupByLibrary.simpleMessage("نصف القطر"),
-        "readLess": MessageLookupByLibrary.simpleMessage("أقرأ أقل"),
-        "readMore": MessageLookupByLibrary.simpleMessage("اقرأ أكثر"),
-        "reel": MessageLookupByLibrary.simpleMessage("بكرة"),
-        "reels": MessageLookupByLibrary.simpleMessage("بكرات"),
-        "register": MessageLookupByLibrary.simpleMessage("يسجل"),
-        "registration": MessageLookupByLibrary.simpleMessage("تسجيل"),
-        "relatedProperties": MessageLookupByLibrary.simpleMessage("خصائص ذات صلة"),
-        "removeDisturbingAds": MessageLookupByLibrary.simpleMessage("إزالة الإعلانات المزعجة"),
-        "report": MessageLookupByLibrary.simpleMessage("تقرير"),
-        "reportProperty": MessageLookupByLibrary.simpleMessage("تقرير الملكية"),
-        "reportReason": MessageLookupByLibrary.simpleMessage("تقرير السبب"),
-        "reportReel": MessageLookupByLibrary.simpleMessage("تقرير بكرة"),
-        "reportUser": MessageLookupByLibrary.simpleMessage("أبلغ عن مستخدم"),
-        "reset": MessageLookupByLibrary.simpleMessage("إعادة ضبط"),
+        "propertyTourRequest": MessageLookupByLibrary.simpleMessage(
+          "طلب جولة العقار",
+        ),
+        "propertyType": MessageLookupByLibrary.simpleMessage("نوع العقار"),
+        "propertyVideo": MessageLookupByLibrary.simpleMessage("فيديو العقار"),
+        "pushNotification": MessageLookupByLibrary.simpleMessage("تنبيه دفع"),
+        "radius": MessageLookupByLibrary.simpleMessage("النطاق"),
+        "readLess": MessageLookupByLibrary.simpleMessage(" أقل"),
+        "readMore": MessageLookupByLibrary.simpleMessage("اقرأ المزيد"),
+        "reel": MessageLookupByLibrary.simpleMessage("ريل"),
+        "reels": MessageLookupByLibrary.simpleMessage("ريلز "),
+        "register": MessageLookupByLibrary.simpleMessage("تسجيل"),
+        "registration": MessageLookupByLibrary.simpleMessage("تسجيل جديد"),
+        "relatedProperties":
+            MessageLookupByLibrary.simpleMessage("عقارات مشابهة"),
+        "removeDisturbingAds": MessageLookupByLibrary.simpleMessage(
+          "احذف الإعلانات المزعجة",
+        ),
+        "report": MessageLookupByLibrary.simpleMessage("إبلاغ"),
+        "reportProperty":
+            MessageLookupByLibrary.simpleMessage("ابلاغ عن العقار"),
+        "reportReason": MessageLookupByLibrary.simpleMessage("سبب البلاغ"),
+        "reportReel": MessageLookupByLibrary.simpleMessage("إبلاغ عن ريل"),
+        "reportUser": MessageLookupByLibrary.simpleMessage("إبلاغ عن مستخدم"),
+        "reset": MessageLookupByLibrary.simpleMessage("إعادة "),
         "residential": MessageLookupByLibrary.simpleMessage("سكني"),
-        "restore": MessageLookupByLibrary.simpleMessage("يعيد"),
-        "retypePassword": MessageLookupByLibrary.simpleMessage("أعد إدخال كلمة السر"),
-        "saved": MessageLookupByLibrary.simpleMessage("أنقذ"),
-        "savedProperties": MessageLookupByLibrary.simpleMessage("الخصائص المحفوظة"),
-        "savedReels": MessageLookupByLibrary.simpleMessage("البكرات المحفوظة"),
-        "scheduleTour": MessageLookupByLibrary.simpleMessage("جدول الجولة"),
+        "restore": MessageLookupByLibrary.simpleMessage("استرجاع"),
+        "retypePassword": MessageLookupByLibrary.simpleMessage(
+          "أعد كتابة الرقم السري",
+        ),
+        "saved": MessageLookupByLibrary.simpleMessage("محفوظ"),
+        "savedProperties": MessageLookupByLibrary.simpleMessage(
+          "العقارات المحفوظة",
+        ),
+        "savedReels": MessageLookupByLibrary.simpleMessage("ريلز محفوظة"),
+        "scheduleTour": MessageLookupByLibrary.simpleMessage("حدد جولة"),
         "school": MessageLookupByLibrary.simpleMessage("مدرسة"),
-        "search": MessageLookupByLibrary.simpleMessage("يبحث"),
-        "searchPlace": MessageLookupByLibrary.simpleMessage("مكان البحث"),
-        "searchProperty": MessageLookupByLibrary.simpleMessage("بحث الملكية"),
+        "search": MessageLookupByLibrary.simpleMessage("بحث"),
+        "searchPlace": MessageLookupByLibrary.simpleMessage("البحث عن مكان"),
+        "searchProperty":
+            MessageLookupByLibrary.simpleMessage(" ابحث عن عقار "),
         "secondPrice": MessageLookupByLibrary.simpleMessage("السعر الثاني"),
-        "select": MessageLookupByLibrary.simpleMessage("يختار"),
-        "selectCity": MessageLookupByLibrary.simpleMessage("حدد الموقع"),
-        "selectDate": MessageLookupByLibrary.simpleMessage("حدد تاريخ"),
+        "select": MessageLookupByLibrary.simpleMessage("اختر"),
+        "selectCity": MessageLookupByLibrary.simpleMessage("اختر الموقع"),
+        "selectDate": MessageLookupByLibrary.simpleMessage("اختر التاريخ"),
         "selectImage": MessageLookupByLibrary.simpleMessage("اختر صورة"),
-        "selectItem": MessageLookupByLibrary.simpleMessage("حدد العنصر"),
-        "selectLocation": MessageLookupByLibrary.simpleMessage("اختر موقعا"),
-        "selectMedia": MessageLookupByLibrary.simpleMessage("حدد الوسائط"),
-        "selectPriceRange": MessageLookupByLibrary.simpleMessage("حدد نطاق السعر"),
-        "selectProperty": MessageLookupByLibrary.simpleMessage("حدد خاصية"),
-        "selectPropertyVideoFile": MessageLookupByLibrary.simpleMessage("حدد ملف فيديو الخاصية"),
-        "selectSupport": MessageLookupByLibrary.simpleMessage("حدد الدعم"),
-        "selectTime": MessageLookupByLibrary.simpleMessage("حدد الوقت"),
-        "selectType": MessageLookupByLibrary.simpleMessage("اختر صنف"),
-        "selectVideo": MessageLookupByLibrary.simpleMessage("حدد فيديو"),
-        "selectYourProperty": MessageLookupByLibrary.simpleMessage("اختر الممتلكات الخاصة بك"),
-        "seller": MessageLookupByLibrary.simpleMessage("تاجر"),
-        "send": MessageLookupByLibrary.simpleMessage("يرسل"),
-        "sendMedia": MessageLookupByLibrary.simpleMessage("إرسال الوسائط"),
-        "sendProperty": MessageLookupByLibrary.simpleMessage("إرسال الملكية"),
-        "setAGoodPasswordByUsingACombinationOfLowercase": MessageLookupByLibrary.simpleMessage(
-            "قم بتعيين كلمة مرور جيدة باستخدام مجموعة من الأحرف الصغيرة والكبيرة والأرقام والرموز."),
-        "share": MessageLookupByLibrary.simpleMessage("يشارك"),
+        "selectItem": MessageLookupByLibrary.simpleMessage("اختر عنصر"),
+        "selectLocation": MessageLookupByLibrary.simpleMessage("اختر الموقع"),
+        "selectMedia": MessageLookupByLibrary.simpleMessage("اختر وسائط"),
+        "selectPriceRange":
+            MessageLookupByLibrary.simpleMessage("اختر نطاق السعر"),
+        "selectProperty": MessageLookupByLibrary.simpleMessage("اختر عقار"),
+        "selectPropertyVideoFile": MessageLookupByLibrary.simpleMessage(
+          "اختر ملف فيديو العقار",
+        ),
+        "selectSupport": MessageLookupByLibrary.simpleMessage("اختر الدعم"),
+        "selectTime": MessageLookupByLibrary.simpleMessage("اختر الوقت"),
+        "selectType": MessageLookupByLibrary.simpleMessage("اختر النوع"),
+        "selectVideo": MessageLookupByLibrary.simpleMessage("اختر فيديو"),
+        "selectYourProperty":
+            MessageLookupByLibrary.simpleMessage("اختر عقارك"),
+        "seller": MessageLookupByLibrary.simpleMessage("بائع"),
+        "send": MessageLookupByLibrary.simpleMessage("إرسال"),
+        "sendMedia": MessageLookupByLibrary.simpleMessage("إرسال وسائط"),
+        "sendProperty": MessageLookupByLibrary.simpleMessage("إرسال العقار"),
+        "setAGoodPasswordByUsingACombinationOfLowercase":
+            MessageLookupByLibrary.simpleMessage(
+          "حط رقم سري قوي فيه حروف كبيرة وصغيرة، أرقام ورموز.",
+        ),
+        "share": MessageLookupByLibrary.simpleMessage("مشاركة"),
         "shop": MessageLookupByLibrary.simpleMessage("محل"),
-        "showAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
-        "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
-        "societyName": MessageLookupByLibrary.simpleMessage("اسم المجتمع"),
+        "showAll": MessageLookupByLibrary.simpleMessage("اعرض الكل "),
+        "signIn": MessageLookupByLibrary.simpleMessage("تسجيل دخول"),
+        "societyName":
+            MessageLookupByLibrary.simpleMessage("اسم المنطقة(المبنى)"),
         "societyNameIsCompulsoryPleaseEnter":
-            MessageLookupByLibrary.simpleMessage("اسم الجمعية إجباري، الرجاء إدخاله"),
-        "somethingWentWrong": MessageLookupByLibrary.simpleMessage("هناك خطأ ما"),
-        "somethingWentWrongTryAgain":
-            MessageLookupByLibrary.simpleMessage("حدث خطأ ما حاول مرة أخرى"),
-        "sqft": MessageLookupByLibrary.simpleMessage("قدم مربع"),
+            MessageLookupByLibrary.simpleMessage(
+          "اسم المجمع مطلوب، دخله",
+        ),
+        "somethingWentWrong": MessageLookupByLibrary.simpleMessage("صار خطأ"),
+        "somethingWentWrongTryAgain": MessageLookupByLibrary.simpleMessage(
+          "صار خطأ، حاول مرة ثانية",
+        ),
+        "sqft": MessageLookupByLibrary.simpleMessage("متر مربع"),
         "studio": MessageLookupByLibrary.simpleMessage("استوديو"),
-        "subject": MessageLookupByLibrary.simpleMessage("موضوع"),
-        "submit": MessageLookupByLibrary.simpleMessage("يُقدِّم"),
-        "subscribe": MessageLookupByLibrary.simpleMessage("يشترك"),
-        "subscribeTo": MessageLookupByLibrary.simpleMessage("الاشتراك في"),
+        "subject": MessageLookupByLibrary.simpleMessage("الموضوع"),
+        "submit": MessageLookupByLibrary.simpleMessage("إرسال"),
+        "subscribe": MessageLookupByLibrary.simpleMessage("اشترك"),
+        "subscribeTo": MessageLookupByLibrary.simpleMessage("اشترك في"),
         "subscribeToProVersionAndEnjoyExclusiveBenefitsListedBelow":
             MessageLookupByLibrary.simpleMessage(
-                "اشترك في الإصدار PRO واستمتع بالمزايا الحصرية المذكورة أدناه."),
-        "subscriptionPlan": MessageLookupByLibrary.simpleMessage("خطة الاشتراك"),
-        "support": MessageLookupByLibrary.simpleMessage("يدعم"),
-        "technical": MessageLookupByLibrary.simpleMessage("اِصطِلاحِيّ"),
-        "termsConditions": MessageLookupByLibrary.simpleMessage("البنود و الظروف"),
+          "اشترك في برو واستمتع بالمزايا الحصرية تحت.",
+        ),
+        "subscriptionPlan":
+            MessageLookupByLibrary.simpleMessage("خطة الاشتراك"),
+        "superMarket": MessageLookupByLibrary.simpleMessage("سوبر ماركت "),
+        "support": MessageLookupByLibrary.simpleMessage("الدعم"),
+        "technical": MessageLookupByLibrary.simpleMessage("تقني"),
+        "termsConditions":
+            MessageLookupByLibrary.simpleMessage("الشروط والأحكام"),
         "termsOfUse": MessageLookupByLibrary.simpleMessage("شروط الاستخدام"),
-        "threeSixtyImages": MessageLookupByLibrary.simpleMessage("صور بزاوية 360 درجة"),
-        "thumbnailGeneratingPleaseWait":
-            MessageLookupByLibrary.simpleMessage("إنشاء صورة مصغرة... الرجاء الانتظار"),
-        "thumbnailGeneratingSuccessfully":
-            MessageLookupByLibrary.simpleMessage("تم إنشاء الصورة المصغرة... بنجاح!!!"),
-        "to": MessageLookupByLibrary.simpleMessage("ل"),
-        "toAccessYourCameraAndMicrophone":
-            MessageLookupByLibrary.simpleMessage("للوصول إلى الكاميرا والميكروفون"),
-        "toBuyProperty": MessageLookupByLibrary.simpleMessage("لشراء العقارات"),
-        "toSellProperty": MessageLookupByLibrary.simpleMessage("لبيع الممتلكات"),
-        "toSetANewPasswordPleaseEnterYourCurrentPassword": MessageLookupByLibrary.simpleMessage(
-            "لتعيين كلمة مرور جديدة، يرجى إدخال كلمة المرور الحالية أولاً."),
-        "tooLargeVideo": MessageLookupByLibrary.simpleMessage("فيديو كبير جدًا."),
-        "totalFloors": MessageLookupByLibrary.simpleMessage("إجمالي الطوابق"),
-        "tourRequestsReceived": MessageLookupByLibrary.simpleMessage("تم تلقي طلبات الجولة"),
-        "tourRequestsSubmitted": MessageLookupByLibrary.simpleMessage("تم تقديم طلبات الجولة"),
-        "trySuratGujaratEtc":
-            MessageLookupByLibrary.simpleMessage("جرب سورات وجوجارات وما إلى ذلك."),
-        "unavailable": MessageLookupByLibrary.simpleMessage("غير متوفره"),
-        "unblock": MessageLookupByLibrary.simpleMessage("رفع الحظر"),
-        "upcoming": MessageLookupByLibrary.simpleMessage("القادمة"),
-        "uploadProperty": MessageLookupByLibrary.simpleMessage("تحميل الملكية"),
-        "uploadReel": MessageLookupByLibrary.simpleMessage("تحميل بكرة"),
-        "userIdNotFound": MessageLookupByLibrary.simpleMessage("لم يتم العثور على هوية المستخدم"),
-        "userNotFound": MessageLookupByLibrary.simpleMessage("لم يتم العثور على المستخدم"),
-        "userRegistrationDone": MessageLookupByLibrary.simpleMessage("تم تسجيل المستخدم"),
+        "threeSixtyImages": MessageLookupByLibrary.simpleMessage("صور  360"),
+        "thumbnailGeneratingPleaseWait": MessageLookupByLibrary.simpleMessage(
+          "قاعدين نجهز الصورة المصغرة... انتظر",
+        ),
+        "thumbnailGeneratingSuccessfully": MessageLookupByLibrary.simpleMessage(
+          "تم تجهيز الصورة المصغرة بنجاح!!!",
+        ),
+        "to": MessageLookupByLibrary.simpleMessage("إلى"),
+        "toAccessYourCameraAndMicrophone": MessageLookupByLibrary.simpleMessage(
+          "عشان تستخدم الكاميرا والمايك",
+        ),
+        "toBuyProperty":
+            MessageLookupByLibrary.simpleMessage("أبغى أشتري عقار"),
+        "toSellProperty":
+            MessageLookupByLibrary.simpleMessage("أبغى أبيع عقار"),
+        "toSetANewPasswordPleaseEnterYourCurrentPassword":
+            MessageLookupByLibrary.simpleMessage(
+          "عشان تحدد رقم سري جديد لازم تدخل الحالي أول.",
+        ),
+        "tooLargeVideo":
+            MessageLookupByLibrary.simpleMessage("الفيديو كبير مرة"),
+        "totalFloors": MessageLookupByLibrary.simpleMessage("عدد الأدوار"),
+        "tourRequestsReceived": MessageLookupByLibrary.simpleMessage(
+          "طلبات معينه مستلمة",
+        ),
+        "tourRequestsSubmitted": MessageLookupByLibrary.simpleMessage(
+          "طلبات معينه مرسلة",
+        ),
+        "trySuratGujaratEtc": MessageLookupByLibrary.simpleMessage(
+          "جرب: الرياض، جدة، ...",
+        ),
+        "unavailable": MessageLookupByLibrary.simpleMessage("مو متاح"),
+        "unblock": MessageLookupByLibrary.simpleMessage("إلغاء الحظر"),
+        "upcoming": MessageLookupByLibrary.simpleMessage("قادمة"),
+        "uploadProperty": MessageLookupByLibrary.simpleMessage("تفاصيل عقار"),
+        "uploadReel": MessageLookupByLibrary.simpleMessage("ارفع ريل "),
+        "userIdNotFound": MessageLookupByLibrary.simpleMessage(
+          "رقم المستخدم مو موجود",
+        ),
+        "userNotFound":
+            MessageLookupByLibrary.simpleMessage("المستخدم مو موجود"),
+        "userRegistrationDone": MessageLookupByLibrary.simpleMessage(
+          "تم تسجيل المستخدم",
+        ),
         "utilities": MessageLookupByLibrary.simpleMessage("خدمات"),
         "video": MessageLookupByLibrary.simpleMessage("فيديو"),
-        "view": MessageLookupByLibrary.simpleMessage("منظر"),
-        "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
-        "views": MessageLookupByLibrary.simpleMessage("الآراء"),
-        "waiting": MessageLookupByLibrary.simpleMessage("منتظر"),
+        "view": MessageLookupByLibrary.simpleMessage("عرض"),
+        "viewAll": MessageLookupByLibrary.simpleMessage("شكل الصور"),
+        "views": MessageLookupByLibrary.simpleMessage("المشاهدات"),
+        "waiting": MessageLookupByLibrary.simpleMessage("بانتظار"),
         "watchVideo": MessageLookupByLibrary.simpleMessage("شاهد الفيديو"),
-        "weAreAgency": MessageLookupByLibrary.simpleMessage("نحن وكالة"),
-        "what": MessageLookupByLibrary.simpleMessage("ماذا"),
-        "whatAreYouHereFor": MessageLookupByLibrary.simpleMessage("لماذا أنت هنا؟"),
-        "whyGoWith": MessageLookupByLibrary.simpleMessage("لماذا تذهب مع"),
-        "writeDescriptionHere": MessageLookupByLibrary.simpleMessage("اكتب الوصف هنا"),
+        "weAreAgency": MessageLookupByLibrary.simpleMessage("إحنا مكتب "),
+        "what": MessageLookupByLibrary.simpleMessage("وش"),
+        "whatAreYouHereFor":
+            MessageLookupByLibrary.simpleMessage("ويش جاي نسوي؟"),
+        "whatsapp": MessageLookupByLibrary.simpleMessage("اطلب اقرار"),
+        "whyGoWith": MessageLookupByLibrary.simpleMessage("ليش تختار"),
+        "writeDescriptionHere": MessageLookupByLibrary.simpleMessage(
+          "اكتب الوصف هنا",
+        ),
         "writeHere": MessageLookupByLibrary.simpleMessage("اكتب هنا"),
         "wrongPasswordProvidedForThatUser":
-            MessageLookupByLibrary.simpleMessage("تم توفير كلمة مرور خاطئة لهذا المستخدم."),
-        "yes": MessageLookupByLibrary.simpleMessage("نعم"),
-        "youAreBlockFrom": MessageLookupByLibrary.simpleMessage("لقد تم حظرك من قبل"),
-        "youAreLookingFor": MessageLookupByLibrary.simpleMessage("أنت تبحث عن"),
-        "youAreReportingThisReel":
-            MessageLookupByLibrary.simpleMessage("أنت تقوم بالإبلاغ عن هذه البكرة"),
-        "youAreReportingThisUser":
-            MessageLookupByLibrary.simpleMessage("أنت تقوم بالإبلاغ عن هذا المستخدم"),
-        "youCanListMaximum5Properties":
-            MessageLookupByLibrary.simpleMessage("يمكنك إدراج 5 خصائص كحد أقصى"),
-        "youCanListUnlimitedProperties":
-            MessageLookupByLibrary.simpleMessage("قائمة خصائص غير محدودة"),
-        "youCanUploadMaximum10Reels":
-            MessageLookupByLibrary.simpleMessage("يمكنك تحميل 10 بكرات كحد أقصى"),
-        "youCanUploadUnlimitedReels": MessageLookupByLibrary.simpleMessage("نشر بكرات غير محدودة"),
-        "youNotAllowPhotoAccess":
-            MessageLookupByLibrary.simpleMessage("أنت لا تسمح بالوصول إلى الصور"),
-        "yourEmailNotCorrectPleaseEnterCorrectEmail": MessageLookupByLibrary.simpleMessage(
-            "بريدك الإلكتروني غير صحيح!!! الرجاء إدخال البريد الإلكتروني الصحيح"),
-        "yourPasswordHasBeenUpdate":
-            MessageLookupByLibrary.simpleMessage("لقد تم تحديث كلمة المرور الخاصة بك."),
-        "yourPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("كلمات السر الخاصة بك لا تتطابق."),
+            MessageLookupByLibrary.simpleMessage(
+          "الرقم السري غلط.",
+        ),
+        "yes": MessageLookupByLibrary.simpleMessage("إيه"),
+        "youAreBlockFrom": MessageLookupByLibrary.simpleMessage(" محظور من "),
+        "youAreLookingFor":
+            MessageLookupByLibrary.simpleMessage("انت تدور على"),
+        "youAreReportingThisReel": MessageLookupByLibrary.simpleMessage(
+          "انت تبلغ عن هالريل",
+        ),
+        "youAreReportingThisUser": MessageLookupByLibrary.simpleMessage(
+          "انت تبلغ عن هالمستخدم",
+        ),
+        "youCanListMaximum5Properties": MessageLookupByLibrary.simpleMessage(
+          "تقدر تعرض 5 عقارات كحد أقصى",
+        ),
+        "youCanListUnlimitedProperties": MessageLookupByLibrary.simpleMessage(
+          "اعرض عقارات بلا حدود",
+        ),
+        "youCanUploadMaximum10Reels": MessageLookupByLibrary.simpleMessage(
+          "تقدر ترفع 10 ريلز  كحد أقصى",
+        ),
+        "youCanUploadUnlimitedReels": MessageLookupByLibrary.simpleMessage(
+          "ارفع ريلز بلا حدود",
+        ),
+        "youNotAllowPhotoAccess": MessageLookupByLibrary.simpleMessage(
+          "ما عطيت إذن للصور",
+        ),
+        "yourEmailNotCorrectPleaseEnterCorrectEmail":
+            MessageLookupByLibrary.simpleMessage(
+          "إيميلك مو صحيح! دخل الإيميل الصح",
+        ),
+        "yourPasswordHasBeenUpdate": MessageLookupByLibrary.simpleMessage(
+          "تم تحديث الرقم السري ",
+        ),
+        "yourPasswordsDoNotMatch": MessageLookupByLibrary.simpleMessage(
+          "الأرقام السرية مو متطابقة.",
+        ),
         "yourProperties": MessageLookupByLibrary.simpleMessage("عقاراتك"),
-        "yourReels": MessageLookupByLibrary.simpleMessage("بكراتك"),
+        "yourReels": MessageLookupByLibrary.simpleMessage("عقارتك "),
         "yourUploadLimitIsReachednpleaseSubscribeToGetMoreUploads":
             MessageLookupByLibrary.simpleMessage(
-                "لقد تم استنفاد حد التحميل الخاص بك!\nيرجى الاشتراك في الخطة المميزة لإزالة الحد.")
+          "وصلت للحد الأعلى للرفع!\nاشترك في الخطة المميزة عشان تزيد الحد.",
+        ),
       };
 }

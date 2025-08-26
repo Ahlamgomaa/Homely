@@ -66,9 +66,13 @@ class LocationPage extends StatelessWidget {
                         style: MyTextStyle.productRegular(
                           size: 17,
                         ).copyWith(
-                            foreground: controller.selectPropertyCategoryIndex == 0 ? null : Paint()
-                              ?..color = ColorRes.balticSea.withValues(alpha: 0.1)
-                              ..strokeWidth = 1),
+                            foreground:
+                                controller.selectPropertyCategoryIndex == 0
+                                    ? null
+                                    : Paint()
+                                  ?..color =
+                                      ColorRes.balticSea.withValues(alpha: 0.1)
+                                  ..strokeWidth = 1),
                       ),
                       const Spacer(),
                       Text(
@@ -76,9 +80,13 @@ class LocationPage extends StatelessWidget {
                         style: MyTextStyle.productRegular(
                           size: 15,
                         ).copyWith(
-                            foreground: controller.selectPropertyCategoryIndex == 0 ? null : Paint()
-                              ?..color = ColorRes.balticSea.withValues(alpha: 0.1)
-                              ..strokeWidth = 1),
+                            foreground:
+                                controller.selectPropertyCategoryIndex == 0
+                                    ? null
+                                    : Paint()
+                                  ?..color =
+                                      ColorRes.balticSea.withValues(alpha: 0.1)
+                                  ..strokeWidth = 1),
                       ),
                     ],
                   ),
@@ -116,7 +124,7 @@ class LocationPage extends StatelessWidget {
                 ),
                 LocationListTiles(
                   controller: controller.gasolineController,
-                  title: S.of(context).gasoline,
+                  title: S.of(context).superMarket,
                   image: AssetRes.gasolineIcon,
                   isResident: controller.selectPropertyCategoryIndex == 0,
                   hintText: AppRes.hint5,
@@ -205,7 +213,8 @@ class LocationListTiles extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   title,
-                  style: MyTextStyle.productRegular(size: 17, color: ColorRes.balticSea),
+                  style: MyTextStyle.productRegular(
+                      size: 17, color: ColorRes.balticSea),
                 ),
               ),
             ),

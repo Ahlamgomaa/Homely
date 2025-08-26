@@ -55,7 +55,7 @@
   "school": "School",
   "gym": "Gym",
   "market": "Market",
-  "gasoline": "Gasoline",
+  "superMarket": "superMarket",
   "airport": "Airport",
   "propertyId": "Property ID",
   "propertyType": "Property Type",
@@ -345,5 +345,6 @@
   "yourUploadLimitIsReachednpleaseSubscribeToGetMoreUploads": "Your Upload Limit is Exhausted!\nPlease subscribe to premium plan to remove limit.",
   "selectCity": "Select Location",
   "mapScreen": "Choose Location",
-  "appName":"Arab Real Estate"
+  "appName": "Arab Real Estate",
+  "whatsapp": "Request Report"
 }
