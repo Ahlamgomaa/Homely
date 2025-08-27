@@ -1,6 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -2762,6 +2763,17 @@ class S {
   /// `Request Report`
   String get whatsapp {
     return Intl.message('Request Report', name: 'whatsapp', desc: '', args: []);
+  }
+
+  /// `Commitment`
+  String get commitment {
+    return Intl.message('Commitment', name: 'commitment', desc: '', args: []);
+  }
+
+  /// `Val license number`
+  String get valLicenseNumber {
+    return Intl.message('Val license number',
+        name: 'valLicenseNumber', desc: '', args: []);
   }
 }
 

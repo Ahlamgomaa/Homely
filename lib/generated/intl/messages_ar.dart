@@ -103,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
         ),
         "comments": MessageLookupByLibrary.simpleMessage("التعليقات"),
         "commercial": MessageLookupByLibrary.simpleMessage("تجاري"),
+        "commitment": MessageLookupByLibrary.simpleMessage("تعهد"),
         "confirmPassword": MessageLookupByLibrary.simpleMessage(
           "تأكيد الرقم السري",
         ),

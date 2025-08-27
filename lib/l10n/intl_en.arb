@@ -346,5 +346,7 @@
   "selectCity": "Select Location",
   "mapScreen": "Choose Location",
   "appName": "Arab Real Estate",
-  "whatsapp": "Request Report"
+  "whatsapp": "Request Report",
+  "commitment": "Commitment",
+  "Vallicensenumber": "Val license number"
 }
