@@ -5,6 +5,7 @@ import 'package:homely/common/widget/top_bar_area.dart';
 import 'package:homely/generated/l10n.dart';
 import 'package:homely/screen/add_edit_property_screen/add_edit_property_screen_controller.dart';
 import 'package:homely/screen/add_edit_property_screen/pages/attributes_page.dart';
+import 'package:homely/screen/add_edit_property_screen/pages/commitment_page.dart';
 import 'package:homely/screen/add_edit_property_screen/pages/location_page.dart';
 import 'package:homely/screen/add_edit_property_screen/pages/media_page.dart';
 import 'package:homely/screen/add_edit_property_screen/pages/overview_page.dart';
@@ -83,7 +84,9 @@ class AddEditPropertyScreen extends StatelessWidget {
                               ? AttributesPage(controller: controller)
                               : controller.selectedTabIndex == 3
                                   ? MediaPage(controller: controller)
-                                  : PricingPage(controller: controller);
+                                  : controller.selectedTabIndex == 4
+                                      ? PricingPage(controller: controller)
+                                      : CommitmentPage(controller: controller);
                 },
               ),
             ),
@@ -96,8 +99,9 @@ class AddEditPropertyScreen extends StatelessWidget {
                 init: controller,
                 builder: (controller) => TextButtonCustom(
                   onTap: controller.onSubmitClick,
-                  title:
-                      controller.selectedTabIndex < 4 ? S.of(context).next : S.of(context).submit,
+                  title: controller.selectedTabIndex < 5
+                      ? S.of(context).next
+                      : S.of(context).submit,
                 ),
               ),
             ),

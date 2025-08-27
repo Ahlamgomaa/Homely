@@ -37,12 +37,18 @@ class PricingPage extends StatelessWidget {
                 children: [
                   AnimatedAlign(
                     duration: const Duration(milliseconds: 200),
-                    alignment: controller.availablePropertyIndex == 0 ? Alignment.centerLeft : Alignment.centerRight,
+                    alignment: controller.availablePropertyIndex == 0
+                        ? Alignment.centerLeft
+                        : Alignment.centerRight,
                     child: Container(
-                      width: (Get.width / controller.availableProperty.length) - 15,
+                      width: (Get.width / controller.availableProperty.length) -
+                          15,
                       decoration: BoxDecoration(
                         borderRadius: controller.availablePropertyIndex == 0
-                            ? const BorderRadius.only(bottomLeft: Radius.circular(30), topLeft: Radius.circular(30))
+                            ? const BorderRadius.only(
+                                bottomLeft: Radius.circular(30),
+                                topLeft: Radius.circular(30),
+                              )
                             : const BorderRadius.only(
                                 bottomRight: Radius.circular(30),
                                 topRight: Radius.circular(30),
@@ -58,18 +64,23 @@ class PricingPage extends StatelessWidget {
                       controller.availableProperty.length,
                       (index) {
                         return InkWell(
-                          onTap: () => controller.onAvailablePropertyClick(index),
+                          onTap: () =>
+                              controller.onAvailablePropertyClick(index),
                           child: Container(
                             width: (Get.width / 2.5),
                             alignment: Alignment.center,
                             child: AnimatedDefaultTextStyle(
                               style: MyTextStyle.productMedium(
-                                  size: 13,
-                                  color:
-                                      controller.availablePropertyIndex == index ? ColorRes.white : ColorRes.osloGrey),
+                                size: 13,
+                                color:
+                                    controller.availablePropertyIndex == index
+                                        ? ColorRes.white
+                                        : ColorRes.osloGrey,
+                              ),
                               duration: const Duration(milliseconds: 200),
                               child: Text(
-                                controller.availableProperty[index].toUpperCase(),
+                                controller.availableProperty[index]
+                                    .toUpperCase(),
                               ),
                             ),
                           ),
@@ -86,21 +97,19 @@ class PricingPage extends StatelessWidget {
                     children: [
                       AddEditPropertyHeading(title: S.of(context).firstPrice),
                       AddEditPropertyTextField(
-                          marginVertical: 10,
-                          controller: controller.firstPriceController,
-                          textInputType: TextInputType.number),
+                        marginVertical: 10,
+                        controller: controller.firstPriceController,
+                        textInputType: TextInputType.number,
+                      ),
                     ],
                   )
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(
-                        height: 15,
-                      ),
-                      AddEditPropertyRichTextHeading(title1: S.of(context).firstPrice, title2: ''),
-                      const SizedBox(
-                        height: 5,
-                      ),
+                      const SizedBox(height: 15),
+                      AddEditPropertyRichTextHeading(
+                          title1: S.of(context).firstPrice, title2: ''),
+                      const SizedBox(height: 5),
                       AddEditPropertyRowTextField(
                         suggestText: '/ ${S.of(context).month}',
                         marginVertical: 10,
@@ -109,12 +118,23 @@ class PricingPage extends StatelessWidget {
                       ),
                     ],
                   ),
+            AddEditPropertyRichTextHeading(
+                title1: S.of(context).valLicenseNumber,
+                title2: S.current.optional),
+            AddEditPropertyTextField(
+              marginVertical: 10,
+              controller: controller.licenseNumberController,
+              textInputType: TextInputType.number,
+            ),
             Visibility(
               visible: controller.availablePropertyIndex == 0,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  AddEditPropertyRichTextHeading(title1: S.of(context).secondPrice, title2: S.of(context).optional),
+                  AddEditPropertyRichTextHeading(
+                    title1: S.of(context).secondPrice,
+                    title2: S.of(context).optional,
+                  ),
                   AddEditPropertyRowTextField(
                     suggestText: '/ ${S.of(context).sqft}',
                     marginVertical: 10,

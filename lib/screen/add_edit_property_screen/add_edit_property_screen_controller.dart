@@ -27,13 +27,16 @@ class AddEditPropertyScreenController extends GetxController {
     S.current.location,
     S.current.attributes,
     S.current.media,
-    S.current.pricing
+    S.current.pricing,
+    S.current.commitment,
   ];
 
   int screenType;
 
   ScrollController scrollController = ScrollController();
   ScrollController pageScrollController = ScrollController();
+  TextEditingController licenseNumberController = TextEditingController();
+
   Map<String, dynamic> param = {};
   Map<String, List<XFile>> filesMap = {};
   PrefService prefService = PrefService();
@@ -41,6 +44,8 @@ class AddEditPropertyScreenController extends GetxController {
   PropertyData? propertyData = Get.arguments;
 
   AddEditPropertyScreenController(this.screenType);
+
+  bool isTermsAccepted = false;
 
   @override
   void onInit() {
@@ -53,12 +58,16 @@ class AddEditPropertyScreenController extends GetxController {
     setting = prefService.getSettingData();
     getPropertyType(selectPropertyCategoryIndex);
     if (screenType == 1) {
-      propertyTitleController = TextEditingController(text: propertyData?.title ?? '');
-      areaController = TextEditingController(text: propertyData?.area.toString() ?? '');
-      aboutPropertyController = TextEditingController(text: propertyData?.about ?? '');
+      propertyTitleController =
+          TextEditingController(text: propertyData?.title ?? '');
+      areaController =
+          TextEditingController(text: propertyData?.area.toString() ?? '');
+      aboutPropertyController =
+          TextEditingController(text: propertyData?.about ?? '');
       if (propertyData?.propertyCategory != null) {
         selectPropertyCategoryIndex = propertyData?.propertyCategory ?? 0;
-        selectPropertyCategory = propertyCategoryList[selectPropertyCategoryIndex];
+        selectPropertyCategory =
+            propertyCategoryList[selectPropertyCategoryIndex];
         getPropertyType(selectPropertyCategoryIndex);
       }
       if (propertyData?.propertyTypeId != null) {
@@ -77,24 +86,34 @@ class AddEditPropertyScreenController extends GetxController {
           return element == propertyData?.bathrooms.toString();
         });
       }
-      propertyAddressController = TextEditingController(text: propertyData?.address ?? '');
+      propertyAddressController =
+          TextEditingController(text: propertyData?.address ?? '');
       if (propertyData?.latitude != null || propertyData?.latitude != '0') {
         latLng = LatLng(double.parse(propertyData?.latitude ?? '0'),
             double.parse(propertyData?.longitude ?? '0'));
       }
 
       if (selectPropertyCategoryIndex == 0) {
-        hospitalController = TextEditingController(text: propertyData?.farFromHospital ?? '');
-        schoolController = TextEditingController(text: propertyData?.farFromSchool ?? '');
-        gymController = TextEditingController(text: propertyData?.farFromGym ?? '');
-        marketController = TextEditingController(text: propertyData?.farFromMarket ?? '');
-        gasolineController = TextEditingController(text: propertyData?.farFromGasoline ?? '');
-        airportController = TextEditingController(text: propertyData?.farFromAirport ?? '');
+        hospitalController =
+            TextEditingController(text: propertyData?.farFromHospital ?? '');
+        schoolController =
+            TextEditingController(text: propertyData?.farFromSchool ?? '');
+        gymController =
+            TextEditingController(text: propertyData?.farFromGym ?? '');
+        marketController =
+            TextEditingController(text: propertyData?.farFromMarket ?? '');
+        gasolineController =
+            TextEditingController(text: propertyData?.farFromGasoline ?? '');
+        airportController =
+            TextEditingController(text: propertyData?.farFromAirport ?? '');
       }
-      societyNameController = TextEditingController(text: propertyData?.societyName ?? '');
-      builtYearController = TextEditingController(text: propertyData?.builtYear.toString() ?? '');
-      selectedFurniture =
-          propertyData?.furniture == 0 ? S.current.notFurnished : S.current.furnished;
+      societyNameController =
+          TextEditingController(text: propertyData?.societyName ?? '');
+      builtYearController =
+          TextEditingController(text: propertyData?.builtYear.toString() ?? '');
+      selectedFurniture = propertyData?.furniture == 0
+          ? S.current.notFurnished
+          : S.current.furnished;
       selectedFacing = CommonFun.facingList.firstWhere((element) {
         return element == propertyData?.facing;
       });
@@ -107,8 +126,8 @@ class AddEditPropertyScreenController extends GetxController {
       selectedCarParking = CommonFun.getCarParkingList().firstWhere((element) {
         return element == propertyData?.carParkings.toString();
       });
-      maintenanceMonthController =
-          TextEditingController(text: propertyData?.maintenanceMonth.toString() ?? '');
+      maintenanceMonthController = TextEditingController(
+          text: propertyData?.maintenanceMonth.toString() ?? '');
 
       if (propertyData?.media != null || propertyData!.media!.isNotEmpty) {
         for (int i = 0; i < (propertyData?.media?.length ?? 0); i++) {
@@ -350,7 +369,8 @@ class AddEditPropertyScreenController extends GetxController {
   }
 
   void pickPropertyVideo() async {
-    if (propertyVideoThumbnail == null && networkPropertyVideoThumbnail == null) {
+    if (propertyVideoThumbnail == null &&
+        networkPropertyVideoThumbnail == null) {
       await picker.pickVideo(source: ImageSource.gallery).then(
         (value) async {
           if (value != null) {
@@ -579,7 +599,8 @@ class AddEditPropertyScreenController extends GetxController {
       return false;
     }
     if (maintenanceMonthController.text.isEmpty) {
-      CommonUI.snackBar(title: S.current.pleaseEnterYourMaintenanceInMonthAmount);
+      CommonUI.snackBar(
+          title: S.current.pleaseEnterYourMaintenanceInMonthAmount);
       return false;
     }
     return true;
@@ -595,7 +616,8 @@ class AddEditPropertyScreenController extends GetxController {
 
   bool isPricing() {
     if (firstPriceController.text.isEmpty) {
-      CommonUI.snackBar(title: AppRes.availablePropertyLog(availablePropertyIndex));
+      CommonUI.snackBar(
+          title: AppRes.availablePropertyLog(availablePropertyIndex));
       return false;
     }
     if (availablePropertyIndex == 1) {
@@ -606,6 +628,7 @@ class AddEditPropertyScreenController extends GetxController {
 
   /// Submit Click
 
+  // تحديث دالة onSubmitClick لتشمل صفحة الـ commitment
   void onSubmitClick() {
     if (selectedTabIndex == 0) {
       if (isOverview()) {
@@ -636,6 +659,7 @@ class AddEditPropertyScreenController extends GetxController {
         return;
       }
     }
+
     if (selectedTabIndex == 3) {
       if (isMedia()) {
         selectedTabIndex = 4;
@@ -645,10 +669,28 @@ class AddEditPropertyScreenController extends GetxController {
         return;
       }
     }
+
     if (selectedTabIndex == 4) {
-      isPricing();
+      if (isPricing()) {
+        selectedTabIndex = 5; // الانتقال لصفحة الـ commitment
+        update();
+        return;
+      } else {
+        return;
+      }
     }
 
+    if (selectedTabIndex == 5) {
+      if (isCommitment()) {
+        // إذا تم قبول الشروط، متابعة تنفيذ باقي الكود
+        submitPropertyData();
+        return;
+      } else {
+        return;
+      }
+    }
+
+    // باقي الكود للتحقق من جميع الصفحات قبل الإرسال
     if (!isOverview()) {
       selectedTabIndex = 0;
       update();
@@ -679,6 +721,15 @@ class AddEditPropertyScreenController extends GetxController {
       return;
     }
 
+    if (!isCommitment()) {
+      selectedTabIndex = 5;
+      update();
+      return;
+    }
+  }
+
+// فصل كود إرسال البيانات في دالة منفصلة
+  void submitPropertyData() {
     param[uUserId] = PrefService.id.toString();
     if (screenType == 1) {
       param[uPropertyId] = propertyData?.id.toString();
@@ -703,7 +754,8 @@ class AddEditPropertyScreenController extends GetxController {
 
     param[uSocietyName] = societyNameController.text;
     param[uBuiltYear] = builtYearController.text;
-    param[uFurniture] = selectedFurniture == CommonFun.furnitureList.first ? '1' : '0';
+    param[uFurniture] =
+        selectedFurniture == CommonFun.furnitureList.first ? '1' : '0';
     param[uFacing] = selectedFacing;
     param[uTotalFloors] = selectedTotalFloor;
     param[uFloorNumber] = selectedFloorNumber;
@@ -741,8 +793,10 @@ class AddEditPropertyScreenController extends GetxController {
         param[uRemoveMediaId] = removeMediaId;
       }
     }
+
     CommonUI.loader();
-    handlePropertyApiCall(param: param, filesMap: filesMap, screenType: screenType);
+    handlePropertyApiCall(
+        param: param, filesMap: filesMap, screenType: screenType);
   }
 
   void handlePropertyApiCall(
@@ -750,7 +804,8 @@ class AddEditPropertyScreenController extends GetxController {
       required Map<String, List<XFile>> filesMap,
       required Map<String, dynamic> param}) {
     // Define the URL based on the screen type
-    final String url = screenType == 0 ? UrlRes.addProperty : UrlRes.editProperty;
+    final String url =
+        screenType == 0 ? UrlRes.addProperty : UrlRes.editProperty;
 
     // Call the API with the specified URL, files, and parameters
     ApiService().multiPartCallApi(
@@ -781,5 +836,30 @@ class AddEditPropertyScreenController extends GetxController {
       }
       CommonUI.materialSnackBar(title: data.message ?? '');
     }
+  }
+
+  void toggleTermsAcceptance() {
+    isTermsAccepted = !isTermsAccepted;
+    update();
+  }
+
+  void proceedAfterAcceptingTerms() {
+    if (isTermsAccepted) {
+      // هنا تقدري تعملي الـ action اللي عاوزاه بعد قبول الشروط
+      // مثلاً: حفظ البيانات أو الانتقال لصفحة أخرى
+      print("Terms accepted, proceeding to submit property...");
+
+      // يمكن تستدعي onSubmitClick() مباشرة أو تعملي أي action تاني
+      onSubmitClick();
+    }
+  }
+
+  // تحديث دالة isCommitment للتحقق من قبول الشروط
+  bool isCommitment() {
+    if (!isTermsAccepted) {
+      CommonUI.snackBar(title: "يرجى الموافقة على الشروط والأحكام أولاً");
+      return false;
+    }
+    return true;
   }
 }
